@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btnPrimary {
+    @apply text-white bg-primaryLight capitalize px-11 py-2.5 rounded-xl font-semibold;
+  }
+  .btnSecondary {
+    @apply bg-white shadow-lg capitalize w-52 h-10 rounded-full font-semibold;
+  }
+  .section-container {
+    @apply min-h-screen max-w-[1172px] mx-auto container;
+  }
+  .navlink {
+    @apply text-textSecondary relative uppercase px-1 pb-3 hover:text-primaryDark font-medium;
+  }
+  .form-modal {
+    @apply bg-white shadow-2xl h-[530px] w-[345px] rounded-3xl p-4;
+  }
+  .form-input {
+    @apply py-1.5 px-0 mb-4 w-full border-gray-400 focus:border-primaryLight placeholder:text-sm focus:placeholder:text-gray-800 outline-none focus:ring-transparent border-0 border-b-[1px];
+  }
+}
+
+body {
+  @apply font-body antialiased;
+}
+
+/**=====================================================**/
+/** Styles for Navlink of Navbar **/
+/**=====================================================**/
+
+.navlink:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background: #01b489;
+}
+
+/**=====================================================**/
+/** Styles for Opening Interface Images **/
+/**=====================================================**/
+
+.openingLogo {
+  height: 45%;
+  width: 25%;
+}
+
+.openingWave {
+  width: 100%;
+  height: 72%;
+}
+
+/**=====================================================**/
+/** Styles for Student Category Images **/
+/**=====================================================**/
+
+.categoryWave {
+  width: 100%;
+  height: 92%;
+}
+
+/**=====================================================**/
+/** Styles for Student Registration Images **/
+/**=====================================================**/
+
+.phase2-wave {
+  width: 100%;
+  height: 107%;
+}
