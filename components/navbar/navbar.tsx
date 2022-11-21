@@ -1,9 +1,12 @@
 import { LocalImage, BtnPrimary, Navlink } from "..";
 import logo from "../../assets/img/logo.png";
+import { useSession, signOut } from "next-auth/react";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <>
       <div className="px-5 sm:px-0 fixed w-full top-0 z-20">
@@ -22,8 +25,17 @@ const Navbar = (props: Props) => {
             <Navlink label="TEARMS AND CONDITION" link="/condition" mr0 />
           </ul>
           <div className="flex items-center">
-            <BtnPrimary className="mr-6" label="Login" link="/login" />
-            <BtnPrimary label="Register" link="/welcome" />
+            {!session ? (
+              <>
+                <BtnPrimary className="mr-6" label="Login" link="/login" />
+                <BtnPrimary label="Register" link="/welcome" />
+              </>
+            ) : (
+              <BtnPrimary
+                onClick={() => signOut({ redirect: false })}
+                label="Logout"
+              />
+            )}
           </div>
         </div>
       </div>

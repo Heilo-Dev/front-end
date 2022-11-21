@@ -1,4 +1,5 @@
 import axios from "axios";
+import { signIn } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -12,7 +13,7 @@ const Login = (props: Props) => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) {
       alert("Please fill up all fields");
       return;
@@ -23,14 +24,12 @@ const Login = (props: Props) => {
       password: password,
     };
 
-    axios
-      .post("https://heilo-services.onrender.com/api/v1/user/login", data)
-      .then((data) => {
-        if (data.data.status === "success") router.push("/student/dashboard");
-      })
-      .catch(function (error) {
-        console.log(error.response.data.error);
-      });
+    const res: any = await signIn("credentials", { ...data, redirect: false });
+    console.log(res?.status);
+    if (res?.status !== 200) {
+      alert("Invalid email or password");
+      return;
+    } else router.push("/student/dashboard");
   };
 
   return (
