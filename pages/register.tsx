@@ -1,5 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import wave from "../assets/img/wave2.png";
 import {
@@ -20,6 +21,7 @@ const Register = (props: Props) => {
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [conditionsAgreed, setConditionsAgreed] = useState(false);
+  const router = useRouter();
 
   const handleRegister = () => {
     if (
@@ -48,7 +50,9 @@ const Register = (props: Props) => {
 
     axios
       .post("https://heilo-services.onrender.com/api/v1/user/register", data)
-      .then((data) => console.log(data))
+      .then((data) => {
+        if (data.data.status === "success") router.push("/login");
+      })
       .catch(function (error) {
         console.log(error.response.data.error);
       });

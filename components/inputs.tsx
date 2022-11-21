@@ -2,17 +2,19 @@ type InputProps = {
   type?: string;
   placeholder: string;
   onChange: (e: any) => void;
+  className?: string;
 };
 
 export const InputBox = ({
   type = "text",
   placeholder,
   onChange,
+  className,
 }: InputProps) => {
   return (
     <input
       onChange={onChange}
-      className="form-input"
+      className={`form-input ${className}`}
       type={type}
       placeholder={placeholder}
     />
