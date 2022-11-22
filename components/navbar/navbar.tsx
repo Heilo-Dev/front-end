@@ -9,8 +9,8 @@ const Navbar = (props: Props) => {
   console.log(session);
   return (
     <>
-      <div className="px-5 sm:px-0 fixed w-full top-0 z-20">
-        <div className="container mx-auto flex max-w-[1172px] items-center justify-between py-7">
+      <div className="px-5 sm:px-0 fixed w-full top-0 z-20 bg-white shadow-sm shadow-slate-200">
+        <div className="container mx-auto flex max-w-[1172px] items-center justify-between py-3">
           <LocalImage
             src={logo}
             width={132}

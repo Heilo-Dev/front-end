@@ -7,6 +7,11 @@ import BannerSection from "./homepage/banner-section";
 import { InputBox } from "./inputs";
 import { SelectBox } from "./inputs";
 import { CheckBox } from "./inputs";
+import { Instagram } from "./icons/socials/instagram";
+import { Twitter } from "./icons/socials/twitter";
+import { Facebook } from "./icons/socials/facebook";
+import { LinkedIn } from "./icons/socials/linkedin";
+import { Youtube } from "./icons/socials/youtube";
 
 export {
   BtnPrimary,
@@ -19,4 +24,9 @@ export {
   InputBox,
   SelectBox,
   CheckBox,
+  Instagram,
+  Twitter,
+  Facebook,
+  LinkedIn,
+  Youtube,
 };
