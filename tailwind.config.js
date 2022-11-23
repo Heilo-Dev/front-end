@@ -13,7 +13,7 @@ module.exports = {
         accent:"rgba(68, 79, 85, 1)",
         accentLight: "#444F55",
         bgAccent:"#F1F1F1"
-
+        muted: "#7D7C7C",
       },
       fontFamily: {
         body: ["Poppins"],
