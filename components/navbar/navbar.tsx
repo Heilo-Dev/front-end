@@ -6,7 +6,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const { data: session } = useSession();
-  console.log(session);
+  console.log(session?.user);
   return (
     <>
       <div className="px-5 sm:px-0 fixed w-full top-0 z-20">
@@ -19,7 +19,7 @@ const Navbar = (props: Props) => {
             link="/"
           />
           <ul className="flex items-center">
-            <Navlink label="Home" link="/" />
+            <Navlink label="Home" link={session?.user ? "/student/homepage" : "/"} />
             <Navlink label="About Us" link="/about" />
             <Navlink label="Contact Us" link="/contact" />
             <Navlink label="TEARMS AND CONDITION" link="/condition" mr0 />
