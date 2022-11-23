@@ -8,6 +8,11 @@ import { InputBox } from "./inputs";
 import { SelectBox } from "./inputs";
 import { CheckBox } from "./inputs";
 import { RoundedCheckBox } from "./inputs";
+import { Instagram } from "./icons/socials/instagram";
+import { Twitter } from "./icons/socials/twitter";
+import { Facebook } from "./icons/socials/facebook";
+import { LinkedIn } from "./icons/socials/linkedin";
+import { Youtube } from "./icons/socials/youtube";
 
 export {
   BtnPrimary,
@@ -21,4 +26,9 @@ export {
   SelectBox,
   CheckBox,
   RoundedCheckBox,
+  Instagram,
+  Twitter,
+  Facebook,
+  LinkedIn,
+  Youtube,
 };
