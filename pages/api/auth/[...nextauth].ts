@@ -1,6 +1,7 @@
 import axios from "axios";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { APIEndpoints } from "../../../data";
 
 export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
@@ -18,8 +19,11 @@ export const authOptions: NextAuthOptions = {
           email: string;
           password: string;
         };
+
+        const url = process.env.apiUrl + APIEndpoints.loginAPI;
+
         const res: any = await axios
-          .post("https://heilo-services.onrender.com/api/v1/user/login", data)
+          .post(url, data)
           .then((data) => data)
           .catch((error) => error);
 

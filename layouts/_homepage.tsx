@@ -7,7 +7,7 @@ const HomepageLayout = ({ children }: React.PropsWithChildren) => {
     <>
       <Navbar />
       <main className="section-container">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

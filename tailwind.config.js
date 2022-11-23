@@ -10,6 +10,7 @@ module.exports = {
         primaryDark: "#01B489",
         primaryLight: "#1BE59D",
         textSecondary: "#444F55",
+        muted: "#7D7C7C",
       },
       fontFamily: {
         body: ["Poppins"],
