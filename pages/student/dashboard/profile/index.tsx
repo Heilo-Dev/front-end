@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import DashboardLayout from "..";
+import { DashboardLayout } from "../../../../layouts";
 
 type Props = {};
 
@@ -14,12 +14,13 @@ const Profile = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
+        <h1>Profile</h1>
       </DashboardLayout>
     </div>
   );
