@@ -36,6 +36,7 @@ export const SelectBox = ({ onChange }: SelectProps) => {
 
 type CheckBoxProps = {
   onChange: (e: any) => void;
+  className:String; 
 };
 
 export const CheckBox = ({ onChange }: CheckBoxProps) => {
@@ -47,3 +48,12 @@ export const CheckBox = ({ onChange }: CheckBoxProps) => {
     />
   );
 };
+
+export const RoundedCheckBox=()=>{
+      return(
+        <input
+        type="checkbox"
+        className="border-primaryLight border-2 p-2 text-primaryLight focus:ring-primaryLight rounded-full"
+    />
+      )
+}

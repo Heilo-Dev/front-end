@@ -9,6 +9,9 @@
   .btnSecondary {
     @apply bg-white shadow-lg capitalize w-52 h-10 rounded-full font-semibold;
   }
+  .btnAccent {
+    @apply bg-accent text-white shadow-lg capitalize w-32 h-10  ;
+  }
   .section-container {
     @apply min-h-screen max-w-[1172px] mx-auto container;
   }

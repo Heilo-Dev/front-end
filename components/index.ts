@@ -7,6 +7,7 @@ import BannerSection from "./homepage/banner-section";
 import { InputBox } from "./inputs";
 import { SelectBox } from "./inputs";
 import { CheckBox } from "./inputs";
+import { RoundedCheckBox } from "./inputs";
 
 export {
   BtnPrimary,
@@ -19,4 +20,5 @@ export {
   InputBox,
   SelectBox,
   CheckBox,
+  RoundedCheckBox,
 };
