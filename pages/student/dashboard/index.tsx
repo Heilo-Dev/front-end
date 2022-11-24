@@ -1,4 +1,6 @@
 import Head from "next/head";
+import profiePic from "../../../assets/img/tutor.png";
+import { DashboardCard, LocalImage, Notification } from "../../../components";
 import { DashboardLayout } from "../../../layouts";
 
 type Props = {
@@ -14,13 +16,47 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
+        <div className="flex justify-end items-center">
+          <Notification className="w-5 mr-5 text-primaryLight" />
+          <div className="bg-primaryLight p-0.5 rounded-full">
+            <LocalImage src={profiePic} width={40} />
+          </div>
+        </div>
+
+        <div className="flex justify-between px-6 mt-6">
+          <DashboardCard
+            cardName="Upcoming Sessions"
+            amount="03"
+            color1="bg-[#5F5F5F]"
+            color2="text-[#02A17B]"
+            color3="text-[#45E7C0]"
+            textColor="text-[#fff]"
+          />
+          <DashboardCard
+            cardName="Tutions completed"
+            amount="53"
+            color1="bg-[#F5F5F5]"
+            color2="text-[#00758F]"
+            color3="text-[#45DDE7]"
+            textColor="text-[#000]"
+          />
+          <DashboardCard
+            cardName="Quiz Appeared"
+            amount="13"
+            color1="bg-[#F5F5F5]"
+            color2="text-[#FFA800]"
+            color3="text-[#FAE0BA]"
+            textColor="text-[#000]"
+          />
+          <DashboardCard
+            cardName="Upcoming Sessions"
+            amount="09"
+            color1="bg-[#F5F5F5]"
+            color2="text-[#DA4453]"
+            color3="text-[#FB9999]"
+            textColor="text-transparent"
+          />
+        </div>
       </DashboardLayout>
     </>
   );

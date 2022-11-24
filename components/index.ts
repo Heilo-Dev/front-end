@@ -13,6 +13,10 @@ import { Twitter } from "./icons/socials/twitter";
 import { Facebook } from "./icons/socials/facebook";
 import { LinkedIn } from "./icons/socials/linkedin";
 import { Youtube } from "./icons/socials/youtube";
+import { Notification } from "./icons/notification";
+import DashboardCard from "./student/dashboard/dashboard-card";
+import { DashboardCardShapeLarge } from "./icons/student-dashboard/dashboard-card-shape-large";
+import { DashboardCardShapeSmall } from "./icons/student-dashboard/dashboard-card-shape-small";
 
 export {
   BtnPrimary,
@@ -31,4 +35,8 @@ export {
   Facebook,
   LinkedIn,
   Youtube,
+  Notification,
+  DashboardCard,
+  DashboardCardShapeLarge,
+  DashboardCardShapeSmall,
 };
