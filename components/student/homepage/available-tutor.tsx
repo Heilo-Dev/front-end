@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import tutor from "../../../assets/img/tutor.png";
+import tutor from "../../../assets/img/wp2398385 1.png";
 
 type Props = {};
 
