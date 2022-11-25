@@ -17,6 +17,9 @@ import { Notification } from "./icons/notification";
 import DashboardCard from "./student/dashboard/dashboard-card";
 import { DashboardCardShapeLarge } from "./icons/student-dashboard/dashboard-card-shape-large";
 import { DashboardCardShapeSmall } from "./icons/student-dashboard/dashboard-card-shape-small";
+import SessionTile from "./student/dashboard/session-tile";
+import Scrollbar from "./ui/scrollbar";
+import NotificationTile from "./student/dashboard/notification-tile";
 
 export {
   BtnPrimary,
@@ -39,4 +42,7 @@ export {
   DashboardCard,
   DashboardCardShapeLarge,
   DashboardCardShapeSmall,
+  SessionTile,
+  Scrollbar,
+  NotificationTile,
 };

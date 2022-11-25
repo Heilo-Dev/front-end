@@ -24,6 +24,15 @@
   .form-input {
     @apply py-1.5 px-0 mb-4 w-full border-gray-400 focus:border-primaryLight placeholder:text-sm focus:placeholder:text-gray-800 focus:text-gray-800 text-gray-500 outline-none focus:ring-transparent border-0 border-b-[1px];
   }
+  .grayDiv {
+    @apply bg-[#F8F8F8] px-8 rounded-xl;
+  }
+  .titleTab {
+    @apply px-5 py-0.5 rounded-full w-fit;
+  }
+  .tabBorder {
+    @apply border-2 border-textSecondary/70;
+  }
 }
 
 body {

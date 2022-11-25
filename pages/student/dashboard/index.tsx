@@ -1,6 +1,13 @@
 import Head from "next/head";
 import profiePic from "../../../assets/img/tutor.png";
-import { DashboardCard, LocalImage, Notification } from "../../../components";
+import {
+  DashboardCard,
+  LocalImage,
+  Notification,
+  NotificationTile,
+  Scrollbar,
+  SessionTile,
+} from "../../../components";
 import { DashboardLayout } from "../../../layouts";
 
 type Props = {
@@ -23,39 +30,78 @@ const Dashboard = ({ children }: Props) => {
           </div>
         </div>
 
-        <div className="flex justify-between px-6 mt-6">
-          <DashboardCard
-            cardName="Upcoming Sessions"
-            amount="03"
-            color1="bg-[#5F5F5F]"
-            color2="text-[#02A17B]"
-            color3="text-[#45E7C0]"
-            textColor="text-[#fff]"
-          />
-          <DashboardCard
-            cardName="Tutions completed"
-            amount="53"
-            color1="bg-[#F5F5F5]"
-            color2="text-[#00758F]"
-            color3="text-[#45DDE7]"
-            textColor="text-[#000]"
-          />
-          <DashboardCard
-            cardName="Quiz Appeared"
-            amount="13"
-            color1="bg-[#F5F5F5]"
-            color2="text-[#FFA800]"
-            color3="text-[#FAE0BA]"
-            textColor="text-[#000]"
-          />
-          <DashboardCard
-            cardName="Upcoming Sessions"
-            amount="09"
-            color1="bg-[#F5F5F5]"
-            color2="text-[#DA4453]"
-            color3="text-[#FB9999]"
-            textColor="text-transparent"
-          />
+        <div className="px-6 mt-6">
+          <div className="flex justify-between">
+            <DashboardCard
+              cardName="Upcoming Sessions"
+              amount="03"
+              color1="bg-[#5F5F5F]"
+              color2="text-[#02A17B]"
+              color3="text-[#45E7C0]"
+              textColor="text-[#fff]"
+            />
+            <DashboardCard
+              cardName="Tutions completed"
+              amount="53"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#00758F]"
+              color3="text-[#45DDE7]"
+              textColor="text-[#000]"
+            />
+            <DashboardCard
+              cardName="Quiz Appeared"
+              amount="13"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#FFA800]"
+              color3="text-[#FAE0BA]"
+              textColor="text-[#000]"
+            />
+            <DashboardCard
+              cardName="Upcoming Sessions"
+              amount="09"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#DA4453]"
+              color3="text-[#FB9999]"
+              textColor="text-transparent"
+            />
+          </div>
+
+          <div className="flex space-x-8">
+            <div className="grayDiv mt-8 p-1 w-full px-3">
+              <h1 className="text-textSecondary bg-white titleTab font-semibold my-2">
+                Upcoming Sessions
+              </h1>
+              <div className="px-5">
+                <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                </Scrollbar>
+              </div>
+            </div>
+            <div className="grayDiv mt-8 p-1 w-full px-5">
+              <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
+                Notifications
+              </h1>
+              <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+              </Scrollbar>
+            </div>
+          </div>
         </div>
       </DashboardLayout>
     </>

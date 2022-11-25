@@ -22,7 +22,7 @@ const DashboardCard = ({
   console.log(textColor);
   return (
     <div
-      className={`rounded-[17px] h-32 w-56 ${color1} relative text-right py-3 px-5 ${textColor}`}
+      className={`rounded-[17px] h-32 w-56 ${color1} cursor-pointer relative text-right py-3 px-5 ${textColor}`}
     >
       <h1 className="text-sm">{cardName}</h1>
       <h1 className="text-xl font-bold mt-3">{amount}</h1>
