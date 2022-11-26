@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { useRouter } from "next/router";
 import logo from "../../../assets/img/logo-white.png";
 import { signOut } from "next-auth/react";
