@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Navlink } from "../components";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -11,7 +14,7 @@ const DashboardLayout = ({ children }: Props) => {
         </div>
         <div className="w-full">
           <div className="pb-4 h-full">
-            <div className="h-full bg-white rounded-3xl p-4">{children}</div>
+            <div className="h-full bg-white rounded-3xl p-4 overflow-y-scroll flex items-center">{children}</div>
           </div>
         </div>
       </div>

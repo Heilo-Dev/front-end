@@ -1,14 +1,19 @@
 import React from 'react'
+import AccountDetails from './account-details'
+import Attachment from './attachment'
+import BasicInfo from './basic-info'
+import EducationInfo from './education-info'
 
 type Props = {}
 
 const OtherInfo = (props: Props) => {
   return (
     <div>
-        <h1 className='w-full bg-amber-100'>education</h1>
-        <h1>education</h1>
-        <h1>education</h1>
-        <h1>education</h1>
+        <BasicInfo/>
+        <EducationInfo/>
+        <AccountDetails/>  
+        <Attachment/> 
+        
     </div>
   )
 }
