@@ -18,22 +18,20 @@ const Sidebar = (props: Props) => {
           Bangladesh University of Professionals
         </p>
       </div>
-      <div className="flex space-x-2 my-8">
-        <div>
+      <div className="my-8">
+        <div className="flex justify-between">
           <p className="text-white bg-[#4CAAF4] w-[200px] rounded-full px-4 mb-2 py-1.5 text-center">
             Tution completed
           </p>
-          <p className="text-white bg-[#A67DEA] w-[200px] rounded-full px-8 py-1.5 text-center">
-            Tution reffered
-          </p>
-        </div>
-        <div>
           <p className="border-2 border-[#E0E0E0] rounded-full px-7 py-1 mb-2">
             48
           </p>
-          <p className="border-2 border-[#E0E0E0] rounded-full px-7 py-1">
-            27
+        </div>
+        <div className="flex justify-between">
+          <p className="text-white bg-[#A67DEA] w-[200px] rounded-full px-8 py-1.5 text-center">
+            Tution reffered
           </p>
+          <p className="border-2 border-[#E0E0E0] rounded-full px-7 py-1">27</p>
         </div>
       </div>
       <div className="border-2 border-[#E0E0E0] rounded-2xl p-4">
