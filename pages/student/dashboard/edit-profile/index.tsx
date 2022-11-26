@@ -15,8 +15,7 @@ const Profile = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <EditProfile/>
-        
+        <EditProfile />
       </DashboardLayout>
     </div>
   );

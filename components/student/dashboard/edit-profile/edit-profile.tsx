@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { APIEndpoints } from "../../../../data";
+import { Scrollbar } from "../../../../components";
 import OtherInfo from "./other-info";
 import Sidebar from "./sidebar";
 
@@ -14,16 +15,14 @@ const EditProfile = (props: Props) => {
   //     .then((data) =>console.log(data.data))
 
   return (
-    <section
-      className="grid  grid-cols-[375px_minmax(700px,_1fr)] gap-12 items-start w-fit mx-auto 
-      relative 
-     "
-    >
-      <div className="w-[375px] fixed top-[120px]">
+    <section className="grid grid-cols-12 gap-4">
+      <div className="col-span-4">
         <Sidebar />
       </div>
-      <div className=" w-[700px] absolute right-0  mt-[-250px]">
-        <OtherInfo />
+      <div className="col-span-8">
+        <Scrollbar style={{ height: "calc(100vh - 60px)" }}>
+          <OtherInfo />
+        </Scrollbar>
       </div>
     </section>
   );
