@@ -1,4 +1,5 @@
 import "../assets/css/globals.css";
+import "../assets/css/scrollbar.css";
 import type { AppProps } from "next/app";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";

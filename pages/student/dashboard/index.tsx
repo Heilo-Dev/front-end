@@ -1,11 +1,50 @@
 import Head from "next/head";
+import profiePic from "../../../assets/img/tutor.png";
 import { DashboardLayout } from "../../../layouts";
+import { useSession } from "next-auth/react";
+import {
+  DashboardCard,
+  LocalImage,
+  Notification,
+  NotificationTile,
+  Scrollbar,
+  SessionTile,
+} from "../../../components";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const Dashboard = ({ children }: Props) => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  useEffect(() => {
+    if (status === "unauthenticated") router.replace("/");
+  }, [router, status]);
+
+  if (status === "loading" || status === "unauthenticated")
+    return (
+      <div className="flex justify-center items-center section-container bg-slate-200">
+        <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+          <div className="animate-pulse flex space-x-4">
+            <div className="rounded-full bg-slate-700 h-10 w-10" />
+            <div className="flex-1 space-y-6 py-1">
+              <div className="h-2 bg-slate-700 rounded" />
+              <div className="space-y-3">
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="h-2 bg-slate-700 rounded col-span-2" />
+                  <div className="h-2 bg-slate-700 rounded col-span-1" />
+                </div>
+                <div className="h-2 bg-slate-700 rounded" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+
   return (
     <>
       <Head>
@@ -14,13 +53,86 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
-        <h1>Dashboard</h1>
+        <div className="flex justify-end items-center">
+          <Notification className="w-5 mr-5 text-primaryLight" />
+          <div className="bg-primaryLight p-0.5 rounded-full">
+            <LocalImage src={profiePic} width={40} />
+          </div>
+        </div>
+
+        <div className="px-6 mt-6">
+          <div className="flex justify-between">
+            <DashboardCard
+              cardName="Upcoming Sessions"
+              amount="03"
+              color1="bg-[#5F5F5F]"
+              color2="text-[#02A17B]"
+              color3="text-[#45E7C0]"
+              textColor="text-[#fff]"
+            />
+            <DashboardCard
+              cardName="Tutions completed"
+              amount="53"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#00758F]"
+              color3="text-[#45DDE7]"
+              textColor="text-[#000]"
+            />
+            <DashboardCard
+              cardName="Quiz Appeared"
+              amount="13"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#FFA800]"
+              color3="text-[#FAE0BA]"
+              textColor="text-[#000]"
+            />
+            <DashboardCard
+              cardName="Upcoming Sessions"
+              amount="09"
+              color1="bg-[#F5F5F5]"
+              color2="text-[#DA4453]"
+              color3="text-[#FB9999]"
+              textColor="text-transparent"
+            />
+          </div>
+
+          <div className="flex space-x-8">
+            <div className="grayDiv mt-8 p-1 w-full px-3">
+              <h1 className="text-textSecondary bg-white titleTab font-semibold my-2">
+                Upcoming Sessions
+              </h1>
+              <div className="px-5">
+                <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                  <SessionTile />
+                </Scrollbar>
+              </div>
+            </div>
+            <div className="grayDiv mt-8 p-1 w-full px-5">
+              <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
+                Notifications
+              </h1>
+              <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+                <NotificationTile />
+              </Scrollbar>
+            </div>
+          </div>
+        </div>
       </DashboardLayout>
     </>
   );

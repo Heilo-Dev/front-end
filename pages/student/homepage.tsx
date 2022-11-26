@@ -1,20 +1,20 @@
-import React from 'react'
-import AvailableTutors from '../../components/student/hopepage/tutor-section';
-import BannerSection from '../../components/student/hopepage/banner-section';
+import React from "react";
+import AvailableTutors from "../../components/student/homepage/tutor-section";
+import BannerSection from "../../components/student/homepage/banner-section";
 
-import { HomepageLayout } from '../../layouts';
+import { HomepageLayout } from "../../layouts";
 
-type Props = {}
+type Props = {};
 
 const Homepage = (props: Props) => {
   return (
     <div>
       <HomepageLayout>
-        <BannerSection/>
-        <AvailableTutors/>
+        <BannerSection />
+        <AvailableTutors />
       </HomepageLayout>
     </div>
-  )
-}
+  );
+};
 
 export default Homepage;
