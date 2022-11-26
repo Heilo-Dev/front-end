@@ -10,6 +10,7 @@ import {
   ProfileIcon,
   EditProfileIcon,
   EmailIcon,
+  LogoutIcon,
 } from "../../../components";
 import { LocalImage } from "../../image-snippents";
 
@@ -62,9 +63,12 @@ const Sidebar = (props: Props) => {
             signOut({ redirect: false });
             router.push("/");
           }}
-          className="text-white"
+          className="flex items-center mr-5"
         >
-          Logout
+          <div className="bg-white py-5 px-3 h-20 rounded-tl-full rounded-tr-full flex items-center">
+            <LogoutIcon width={26} className="text-primaryDark" />
+          </div>
+          <h1 className="ml-2.5 text-white">Log Out</h1>
         </button>
       </div>
     </div>
