@@ -28,6 +28,7 @@ import { Laptop } from "./icons/student-dashboard/laptop";
 import { ProfileIcon } from "./icons/profile-icon";
 import { EditProfileIcon } from "./icons/edit-profile-icon";
 import { EmailIcon } from "./icons/email-icon";
+import { LogoutIcon } from "./icons/logout-icon";
 
 export {
   BtnPrimary,
@@ -61,4 +62,5 @@ export {
   ProfileIcon,
   EditProfileIcon,
   EmailIcon,
+  LogoutIcon,
 };
