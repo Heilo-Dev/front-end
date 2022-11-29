@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { Scrollbar, StudentInfoCard } from "../../../../components";
 import { DashboardLayout } from "../../../../layouts";
 
 type Props = {};
@@ -14,13 +15,88 @@ const Profile = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
-        <h1>Profile</h1>
+        <section className="grid grid-cols-12 gap-6 mt-3">
+          <div className="col-span-4">
+            <StudentInfoCard />
+          </div>
+          <div className="col-span-8">
+            <Scrollbar style={{ height: "calc(100vh - 130px)" }}>
+              <div className="grayDiv p-4 rounded-3xl">
+                <div className="titleTab bg-[#3DDEA5] text-white">
+                  Basic Information
+                </div>
+                <div className="grid grid-cols-12 gap-4">
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">Address</h1>
+                    <p className="text-[#7D7D7D] font-semibold">
+                      274, sher-e-bangla road, Dhaka- 1209
+                    </p>
+                  </div>
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">Gender</h1>
+                    <p className="text-[#7D7D7D] font-semibold">Male</p>
+                  </div>
+                  <div className="col-span-6"></div>
+                </div>
+              </div>
+
+              <div className="grayDiv p-4 rounded-3xl mt-4">
+                <div className="titleTab bg-[#3DDEA5] text-white">
+                  Education
+                </div>
+                <div className="grid grid-cols-12 gap-4">
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">
+                      Current Institute
+                    </h1>
+                    <p className="text-[#7D7D7D] font-semibold">
+                      Maple Leaf International School And College
+                    </p>
+                  </div>
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">Class</h1>
+                    <p className="text-[#7D7D7D] font-semibold">Std- VI</p>
+                  </div>
+                  <div className="col-span-6"></div>
+                </div>
+
+                <div className="grid grid-cols-12 gap-4">
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">Medium</h1>
+                    <p className="text-[#7D7D7D] font-semibold">
+                      English Medium
+                    </p>
+                  </div>
+                  <div className="col-span-6 p-4 pb-0">
+                    <h1 className="font-light text[#7D7D7D] mb-1.5">
+                      Background
+                    </h1>
+                    <p className="text-[#7D7D7D] font-semibold">Science</p>
+                  </div>
+                  <div className="col-span-6"></div>
+                </div>
+              </div>
+
+              <div className="border-4 border-[#F1F1F1] rounded-3xl mt-4 grid grid-cols-12">
+                <div className="col-span-6 p-4 pb-0 border border-r-4 border-[#F1F1F1]">
+                  <div className="titleTab bg-[#3DDEA5] text-white">
+                    Reviews
+                  </div>
+                  <h1 className="font-light text[#7D7D7D] mb-1.5">Medium</h1>
+                  <p className="text-[#7D7D7D] font-semibold">English Medium</p>
+                </div>
+
+                <div className="col-span-6 p-4 pb-0">
+                  <div className="titleTab bg-[#3DDEA5] text-white">
+                    Reviews
+                  </div>
+                  <h1 className="font-light text[#7D7D7D] mb-1.5">Medium</h1>
+                  <p className="text-[#7D7D7D] font-semibold">English Medium</p>
+                </div>
+              </div>
+            </Scrollbar>
+          </div>
+        </section>
       </DashboardLayout>
     </div>
   );

@@ -29,6 +29,8 @@ import { ProfileIcon } from "./icons/profile-icon";
 import { EditProfileIcon } from "./icons/edit-profile-icon";
 import { EmailIcon } from "./icons/email-icon";
 import { LogoutIcon } from "./icons/logout-icon";
+import StudentInfoCard from "./student/dashboard/student-info-card";
+import { StarIcon } from "./icons/student-dashboard/star-icon";
 
 export {
   BtnPrimary,
@@ -63,4 +65,6 @@ export {
   EditProfileIcon,
   EmailIcon,
   LogoutIcon,
+  StudentInfoCard,
+  StarIcon,
 };

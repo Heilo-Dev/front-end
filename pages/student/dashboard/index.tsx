@@ -1,5 +1,4 @@
 import Head from "next/head";
-import profiePic from "../../../assets/img/tutor.png";
 import { DashboardLayout } from "../../../layouts";
 import { useSession } from "next-auth/react";
 import {
@@ -53,13 +52,6 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <div className="flex justify-end items-center">
-          <Notification className="w-5 mr-5 text-primaryLight" />
-          <div className="bg-primaryLight p-0.5 rounded-full">
-            <LocalImage src={profiePic} width={40} />
-          </div>
-        </div>
-
         <div className="px-6 mt-6">
           <div className="flex justify-between">
             <DashboardCard
