@@ -31,6 +31,8 @@ import { EmailIcon } from "./icons/email-icon";
 import { LogoutIcon } from "./icons/logout-icon";
 import StudentInfoCard from "./student/dashboard/student-info-card";
 import { StarIcon } from "./icons/student-dashboard/star-icon";
+import ReviewTile from "./student/dashboard/profile/review-tile";
+import Review from "./student/dashboard/profile/review";
 
 export {
   BtnPrimary,
@@ -67,4 +69,6 @@ export {
   LogoutIcon,
   StudentInfoCard,
   StarIcon,
+  ReviewTile,
+  Review,
 };

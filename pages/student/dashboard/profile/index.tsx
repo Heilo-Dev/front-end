@@ -1,6 +1,11 @@
 import Head from "next/head";
 import React from "react";
-import { Scrollbar, StudentInfoCard } from "../../../../components";
+import {
+  Review,
+  ReviewTile,
+  Scrollbar,
+  StudentInfoCard,
+} from "../../../../components";
 import { DashboardLayout } from "../../../../layouts";
 
 type Props = {};
@@ -82,16 +87,27 @@ const Profile = (props: Props) => {
                   <div className="titleTab bg-[#3DDEA5] text-white">
                     Reviews
                   </div>
-                  <h1 className="font-light text[#7D7D7D] mb-1.5">Medium</h1>
-                  <p className="text-[#7D7D7D] font-semibold">English Medium</p>
+
+                  <div className="py-3 pl-10">
+                    <Scrollbar style={{ height: "calc(100vh - 400px)" }}>
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                      <ReviewTile />
+                    </Scrollbar>
+                  </div>
                 </div>
 
                 <div className="col-span-6 p-4 pb-0">
-                  <div className="titleTab bg-[#3DDEA5] text-white">
-                    Reviews
-                  </div>
-                  <h1 className="font-light text[#7D7D7D] mb-1.5">Medium</h1>
-                  <p className="text-[#7D7D7D] font-semibold">English Medium</p>
+                  <Review />
                 </div>
               </div>
             </Scrollbar>
