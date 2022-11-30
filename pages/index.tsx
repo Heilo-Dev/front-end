@@ -8,7 +8,6 @@ import { useGetUserInfoQuery } from "../redux/slices/apiSlice";
 export default function Home() {
   const { data: session } = useSession();
   const token = session?.user?.email;
-
   useEffect(() => {
     localStorage.setItem("heiloUserToken", token);
   }, [token]);
