@@ -1,11 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import student from "../../../assets/img/student.png";
+import { UserInfo } from "../../../types/user";
 import { StarIcon } from "../../icons/student-dashboard/star-icon";
 
-type Props = {};
+type Props = {
+  userInfo: UserInfo;
+};
 
-const StudentInfoCard = (props: Props) => {
+const StudentInfoCard = ({ userInfo }: Props) => {
   return (
     <div className="grayDiv rounded-3xl p-8 mt-16">
       <div className="mt-[-90px] mb-6 mx-auto w-fit relative">
@@ -17,7 +20,7 @@ const StudentInfoCard = (props: Props) => {
       </div>
       <div className="flex flex-col">
         <span className="titleTab tabBorder px-2.5 rounded-full border-[2px] border-[#E0E0E0] mt-2 capitalize font-semibold text-[#747474]">
-          sakib abdullah
+          {userInfo?.name}
         </span>
         <p className="w-fit border-2 border-[#E0E0E0] text-[#747474] rounded-full inline-block py-1 px-3 text-center text-xs my-2">
           Bangladesh University of Professionals

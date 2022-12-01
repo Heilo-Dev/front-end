@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Review,
   ReviewTile,
@@ -7,10 +7,20 @@ import {
   StudentInfoCard,
 } from "../../../../components";
 import { DashboardLayout } from "../../../../layouts";
+import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
+import { UserInfo } from "../../../../types/user";
 
 type Props = {};
 
 const Profile = (props: Props) => {
+  const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
+  const { data, error, isLoading, isFetching, isSuccess } =
+    useGetUserInfoQuery();
+
+  useEffect(() => {
+    if (data) setUserInfo(data.result);
+  }, [data]);
+
   return (
     <div>
       <Head>
@@ -22,7 +32,7 @@ const Profile = (props: Props) => {
       <DashboardLayout>
         <section className="grid grid-cols-12 gap-6 mt-3">
           <div className="col-span-4">
-            <StudentInfoCard />
+            <StudentInfoCard userInfo={userInfo} />
           </div>
           <div className="col-span-8">
             <Scrollbar style={{ height: "calc(100vh - 130px)" }}>

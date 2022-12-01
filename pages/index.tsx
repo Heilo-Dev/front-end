@@ -10,7 +10,7 @@ export default function Home() {
   const token = session?.user?.email;
 
   useEffect(() => {
-    localStorage.setItem("heiloUserToken", token);
+    if (token) localStorage.setItem("heiloUserToken", token);
   }, [token]);
   // !!!!! We Need this to get the User Info
   // const { data, error, isLoading, isFetching, isSuccess } =
