@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { APIEndpoints } from "../../data";
 
-var token;
+var token: string | null;
 const getUserToken = async () => {
   token = await localStorage.getItem("heiloUserToken");
 };
