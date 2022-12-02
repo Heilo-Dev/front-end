@@ -27,7 +27,7 @@ const Sidebar = (props: Props) => {
         <DashboardMenuItem
           title="on demand"
           icon={<GraduationCap width={30} />}
-          path="/student/dashboard/on-demand"
+          path="/student/dashboard/student-find-tutor"
         />
         <DashboardMenuItem
           title="quiz"

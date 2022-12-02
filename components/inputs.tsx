@@ -51,7 +51,7 @@ export const CheckBox = ({ onChange }: CheckBoxProps) => {
 
 type RoundedCheckBoxProps = {
   onChange: (e: any) => void;
-  className: String;
+  value:string;
 };
 
 export const RoundedCheckBox = (props: RoundedCheckBoxProps) => {
@@ -59,6 +59,8 @@ export const RoundedCheckBox = (props: RoundedCheckBoxProps) => {
     <input
       type="checkbox"
       className="border-primaryLight border-2 p-2 cursor-pointer text-primaryLight focus:ring-primaryLight rounded-full"
+      onChange={props.onChange}
+      value={props.value}
     />
   );
 };
