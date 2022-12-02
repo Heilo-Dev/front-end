@@ -1,25 +1,24 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Slider from 'rc-slider';
 
 import {InputBox, RoundedCheckBox } from "../../../inputs";
 
-type Props = {};
+type Props = {
+  handleChange:string;
+};
 
 const SearchBar = (props: Props) => {
-  const handleChange = (e:string) => {
-    // Destructuring
-    const { value, checked } = e.target;
-    
-      
-    console.log(`${value} is ${checked}`);
-}
+  const {getGender}=props;
+  
+ 
   return (
     <div className="my-8">
       <div className="w-fit mx-auto mb-4 ">
         <div className="tabBorder w-fit rounded-l-full px-6 relative mr-20">
-          <select name="subject" id="">
-            <option value="">subject</option>
+          <select  onChange={(e)=>setSubject(e.target.value)} name="subject" id="">
+            <option value="Subject">subject</option>
+            <option value="Bangla">Bangla</option>
           </select>
           <select name="subject" id="">
             <option value="">topic</option>
@@ -31,7 +30,7 @@ const SearchBar = (props: Props) => {
       </div>
       <div className="flex justify-around items-center my-3">
         <div>
-          <RoundedCheckBox value="male" onChange={handleChange}/>
+          <RoundedCheckBox value="male" onChange={getGender}/>
           <label htmlFor="">male</label>
         </div>
         <div>

@@ -1,18 +1,31 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Notification from "../../../../components/student/dashboard/student-find-tutor/notifications";
 import SearchBar from "../../../../components/student/dashboard/student-find-tutor/search-bar";
 import AvailableTutor from "../../../../components/student/homepage/available-tutor";
 import Scrollbar from "../../../../components/ui/scrollbar";
+import { APIEndpoints } from "../../../../data";
 import { DashboardLayout } from "../../../../layouts";
 import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
 
 type Props = {};
 
 const StudentFindTutor = (props: Props) => {
-    const {data}=useGetUserInfoQuery()
-    console.log(data);
+  const [user, SetUser] = useState([]);
+  const [gender, setGender] = useState('')
+  const [subject, setSubject] = useState('')
+  console.log(gender)
+  const url = process.env.ApiUrl + APIEndpoints.studentInfo;
+  console.log(url)
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => SetUser(data));
+  }, [url]);
 
+  const getGender = (e) => {
+   setGender(e.target.value)
+}
   return (
     <div>
       <Head>
@@ -24,7 +37,7 @@ const StudentFindTutor = (props: Props) => {
       <DashboardLayout>
         <section className="grid grid-cols-12 gap-16">
           <div className="col-span-8">
-            <SearchBar />
+            <SearchBar getGender={getGender} />
             <div>
               <Scrollbar style={{ height: "calc(75vh - 100px)" }}>
                 <div className="px-6">
