@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import EditProfile from "../../../../components/student/dashboard/edit-profile/edit-profile";
+import EditProfile from "../../../../components/teacher/dashboard/edit-profile/edit-profile";
 import { DashboardLayout } from "../../../../layouts";
 
 type Props = {};

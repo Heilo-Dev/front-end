@@ -5,7 +5,7 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <div className="mt-32">
+    <div className="mt-32 section-container min-h-[80vh]">
       <div className="flex justify-between items-center">
         <Image width={550} src={creative} alt=''/>
         <div className="ml-8">
