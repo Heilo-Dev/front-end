@@ -20,7 +20,7 @@ import { DashboardCardShapeSmall } from "./icons/student-dashboard/dashboard-car
 import SessionTile from "./student/dashboard/session-tile";
 import Scrollbar from "./ui/scrollbar";
 import NotificationTile from "./student/dashboard/notification-tile";
-import Sidebar from "./student/dashboard/sidebar";
+import StudentSidebar from "./student/dashboard/sidebar";
 import { GraduationCap } from "./icons/student-dashboard/graduation-cap";
 import DashboardMenuItem from "./student/dashboard/dashboard-menu-item";
 import { ClipBoardListCheck } from "./icons/student-dashboard/clipboard-list-check";
@@ -33,6 +33,11 @@ import StudentInfoCard from "./student/dashboard/student-info-card";
 import { StarIcon } from "./icons/student-dashboard/star-icon";
 import ReviewTile from "./student/dashboard/profile/review-tile";
 import Review from "./student/dashboard/profile/review";
+import TeacherSidebar from "./teacher/dashboard/sidebar";
+import { WalletIcon } from "./icons/teacher-dashboard/laptop";
+import TutionRequestTile from "./teacher/dashboard/tution-request-tile";
+import { CircleCheckIcon } from "./icons/teacher-dashboard/circle-check-icon";
+import { CircleCrossIcon } from "./icons/teacher-dashboard/circle-cross-icon";
 
 export {
   BtnPrimary,
@@ -58,7 +63,7 @@ export {
   SessionTile,
   Scrollbar,
   NotificationTile,
-  Sidebar,
+  StudentSidebar,
   GraduationCap,
   DashboardMenuItem,
   ClipBoardListCheck,
@@ -71,4 +76,9 @@ export {
   StarIcon,
   ReviewTile,
   Review,
+  TeacherSidebar,
+  WalletIcon,
+  TutionRequestTile,
+  CircleCheckIcon,
+  CircleCrossIcon,
 };
