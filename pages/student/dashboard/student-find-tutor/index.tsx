@@ -1,3 +1,4 @@
+import axios from "axios";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Notification from "../../../../components/student/dashboard/student-find-tutor/notifications";
@@ -11,17 +12,34 @@ import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
 type Props = {};
 
 const StudentFindTutor = (props: Props) => {
-  const [user, SetUser] = useState([]);
+  const [users, setUsers] = useState([]);
   const [gender, setGender] = useState("");
   const [subject, setSubject] = useState("");
-  const { data } = useGetUserInfoQuery([gender, subject]);
-  console.log(data?.result);
+
+  useEffect(() => {
+    var token;
+    const getUserToken = async () => {
+      token = await localStorage.getItem("heiloUserToken");
+      console.log(token);
+    };
+    getUserToken();
+
+    const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
+
+    axios
+      .get(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((data) => setUsers(data.data.result));
+  }, [gender, subject]);
 
   const getGender = (e) => {
     setGender(e.target.value);
   };
   const getSubject = (e) => {
-    setSubject(e.target.value)
+    setSubject(e.target.value);
   };
   return (
     <div>
@@ -34,20 +52,14 @@ const StudentFindTutor = (props: Props) => {
       <DashboardLayout>
         <section className="grid grid-cols-12 gap-16">
           <div className="col-span-8">
-            <SearchBar
-              getGender={getGender}
-              getSubject={getSubject}
-              
-            />
+            <SearchBar getGender={getGender} getSubject={getSubject} />
             <div>
               <Scrollbar style={{ height: "calc(75vh - 100px)" }}>
                 <div className="px-6">
-                  {
-                    data?.result && data.result.map((user)=><AvailableTutor
-                    key={user._id} 
-                    user={user} />)
-                  }
-                  
+                  {users &&
+                    users.map((user) => (
+                      <AvailableTutor key={user._id} user={user} />
+                    ))}
                 </div>
               </Scrollbar>
             </div>

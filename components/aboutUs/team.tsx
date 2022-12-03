@@ -9,7 +9,7 @@ import { LinkedIn } from "../icons/socials/linkedin";
 
 const Team = (props: Props) => {
   return (
-    <div className="mt-28">
+    <div className="mt-28 section-container">
       <h1 className="capitalize text-4xl text-textSecondary text-center">
         The team
       </h1>
