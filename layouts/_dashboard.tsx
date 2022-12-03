@@ -1,4 +1,9 @@
-import { LocalImage, Notification, Sidebar } from "../components";
+import {
+  LocalImage,
+  Notification,
+  StudentSidebar,
+  TeacherSidebar,
+} from "../components";
 import profiePic from "../assets/img/tutor.png";
 
 type Props = {
@@ -9,7 +14,8 @@ const DashboardLayout = ({ children }: Props) => {
   return (
     <>
       <div className="bg-primaryDark h-screen flex p-4 pb-0">
-        <Sidebar />
+        {/* <StudentSidebar /> */}
+        <TeacherSidebar />
         <div className="w-full">
           <div className="pb-4 h-full">
             <div className="h-full bg-white rounded-3xl py-3 px-7">
