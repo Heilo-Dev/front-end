@@ -24,13 +24,7 @@ export const userApi = createApi({
   }),
   endpoints: (builder) => ({
     getUserInfo: builder.query({
-      query: (args) => {
-        const [gender,subject]=args;
-        console.log(gender,subject)
-        return{
-          url:`${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`
-        }
-      }
+      query: () => APIEndpoints.getUserInfo,
     }),
   }),
 });
