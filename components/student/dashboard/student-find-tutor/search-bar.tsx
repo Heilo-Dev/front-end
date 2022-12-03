@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Slider from 'rc-slider';
-
 import {InputBox, RoundedCheckBox } from "../../../inputs";
 
 type Props = {
@@ -9,32 +8,31 @@ type Props = {
 };
 
 const SearchBar = (props: Props) => {
-  const {getGender}=props;
-  
- 
+  const {getGender,getSubject,searchOn}=props;
   return (
     <div className="my-8">
       <div className="w-fit mx-auto mb-4 ">
         <div className="tabBorder w-fit rounded-l-full px-6 relative mr-20">
-          <select  onChange={(e)=>setSubject(e.target.value)} name="subject" id="">
-            <option value="Subject">subject</option>
+          <select defaultValue='subject'  onChange={(e)=>getSubject(e)}  id="">
+            <option value="English">English</option>
             <option value="Bangla">Bangla</option>
+            <option value="Ict">Ict</option>
           </select>
           <select name="subject" id="">
             <option value="">topic</option>
           </select>
-          <button className="btnPrimary h-[45px] w-32  rounded-bl-full rounded-r-full absolute right-[-105px] top-[-2px]">
+          <button  className="btnPrimary h-[45px] w-32  rounded-bl-full rounded-r-full absolute right-[-105px] top-[-2px]">
             search
           </button>
         </div>
       </div>
       <div className="flex justify-around items-center my-3">
         <div>
-          <RoundedCheckBox value="male" onChange={getGender}/>
+          <RoundedCheckBox value="male" onChange={(e)=>getGender(e)}/>
           <label htmlFor="">male</label>
         </div>
         <div>
-          <RoundedCheckBox/>
+          <RoundedCheckBox value="female" onChange={(e)=>getGender(e)}/>
           <label htmlFor="">female</label>
         </div>
         <div className="tabBorder rounded-full px-3 py-0">

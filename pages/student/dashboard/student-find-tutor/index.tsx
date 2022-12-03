@@ -12,20 +12,17 @@ type Props = {};
 
 const StudentFindTutor = (props: Props) => {
   const [user, SetUser] = useState([]);
-  const [gender, setGender] = useState('')
-  const [subject, setSubject] = useState('')
-  console.log(gender)
-  const url = process.env.ApiUrl + APIEndpoints.studentInfo;
-  console.log(url)
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => SetUser(data));
-  }, [url]);
+  const [gender, setGender] = useState("");
+  const [subject, setSubject] = useState("");
+  const { data } = useGetUserInfoQuery([gender, subject]);
+  console.log(data?.result);
 
   const getGender = (e) => {
-   setGender(e.target.value)
-}
+    setGender(e.target.value);
+  };
+  const getSubject = (e) => {
+    setSubject(e.target.value)
+  };
   return (
     <div>
       <Head>
@@ -37,12 +34,20 @@ const StudentFindTutor = (props: Props) => {
       <DashboardLayout>
         <section className="grid grid-cols-12 gap-16">
           <div className="col-span-8">
-            <SearchBar getGender={getGender} />
+            <SearchBar
+              getGender={getGender}
+              getSubject={getSubject}
+              
+            />
             <div>
               <Scrollbar style={{ height: "calc(75vh - 100px)" }}>
                 <div className="px-6">
-                  <AvailableTutor />
-                  <AvailableTutor />
+                  {
+                    data?.result && data.result.map((user)=><AvailableTutor
+                    key={user._id} 
+                    user={user} />)
+                  }
+                  
                 </div>
               </Scrollbar>
             </div>
