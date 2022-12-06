@@ -24,7 +24,7 @@ const StudentFindTutor = (props: Props) => {
     };
     getUserToken();
 
-    const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
+  const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
 
     axios
       .get(url, {

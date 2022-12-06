@@ -121,3 +121,27 @@ select{
   appearance: none;
   border: none;
 }
+
+table{
+  border-collapse: separate;
+}
+
+thead{
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+tbody{
+  padding-top: 30px;
+}
+
+th{
+  border-right: 2px solid #B9B9B9;
+}
+
+td{
+  border-bottom: 4px solid white;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
