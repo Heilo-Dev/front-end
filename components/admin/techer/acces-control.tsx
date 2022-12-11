@@ -7,8 +7,8 @@ type Props = {};
 
 const AccessControl = (props: Props) => {
   return (
-    <div className="mt-16">
-      <div className="w-fit mx-auto rounded-2xl px-6 bg-white flex">
+    <div className="mt-10">
+      <div className="w-fit mx-auto rounded-full px-6 bg-white flex">
         <input
           className="border-none text-[#BDBDBD] "
           type="search"
@@ -18,17 +18,22 @@ const AccessControl = (props: Props) => {
         />
         <SearchIcon color="#BDBDBD" width={30} />
       </div>
-     <Scrollbar className="mt-12" style={{ height: "calc(90vh - 120px)" }}>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-        <ActionCard/>
-     </Scrollbar>
+      <Scrollbar className="mt-8" style={{ height: "calc(90vh - 80px)" }}>
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+        <ActionCard />
+      </Scrollbar>
     </div>
   );
 };

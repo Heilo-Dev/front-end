@@ -31,8 +31,22 @@ const Admin = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminLayout>
-        <div className="px-6 mt-6">
-          <h1>admin</h1>
+        <div className="px-6">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-6 p-4 pb-0">
+              <div className="grayDiv p-4 rounded-3xl mt-4">
+                <div className="titleTab bg-white font-semibold text-textSecondary">
+                  Upcomming Sessions
+                </div>
+                <div className="p-4"></div>
+              </div>
+            </div>
+            <div className="col-span-6 p-4 pb-0">
+              <h1 className="font-light text[#7D7D7D] mb-1.5">Background</h1>
+              <p className="text-[#7D7D7D] font-semibold">Science</p>
+            </div>
+            <div className="col-span-6"></div>
+          </div>
         </div>
       </AdminLayout>
     </>

@@ -16,12 +16,10 @@ const AdminLayout = ({ children }: Props) => {
     <>
       <div className="bg-primaryDark h-screen flex pl-4">
         {/* <StudentSidebar /> */}
-          <AdminSidebar />
+        <AdminSidebar />
         <div className="w-full">
           <div className="h-full">
-            <div className="h-full bg-white rounded-l-3xl">
-              {children}
-            </div>
+            <div className="h-full bg-white rounded-l-3xl">{children}</div>
           </div>
         </div>
       </div>

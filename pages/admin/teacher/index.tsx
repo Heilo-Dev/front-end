@@ -18,8 +18,8 @@ const TeacherAdmin = (props: Props) => {
             <Due />
           </div>
         </div>
-        <div className="col-span-4 bg-[#EBEBEB] rounded-l-2xl h-screen">
-            <AccessControl/>
+        <div className="col-span-4 bg-[#EBEBEB] rounded-l-2xl h-screen px-2">
+          <AccessControl />
         </div>
       </div>
     </AdminLayout>
