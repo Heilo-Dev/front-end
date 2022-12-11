@@ -2,7 +2,11 @@ import Head from "next/head";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { DashboardCard } from "../../components";
+import {
+  DashboardCard,
+  TotalClassCompleted,
+  UpcommingSessions,
+} from "../../components";
 import { AdminLayout, DashboardLayout } from "../../layouts";
 
 type Props = {
@@ -31,21 +35,45 @@ const Admin = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminLayout>
-        <div className="px-6">
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-span-6 p-4 pb-0">
-              <div className="grayDiv p-4 rounded-3xl mt-4">
-                <div className="titleTab bg-white font-semibold text-textSecondary">
-                  Upcomming Sessions
-                </div>
-                <div className="p-4"></div>
+        <div className="pl-6">
+          <div className="flex flex-col pt-5">
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-span-4 p-4 pb-0">
+                <h1 className="uppercase text-[#7D7C7C]/60 font-light text-xl">
+                  number of students
+                </h1>
+                <h1 className="uppercase text-[#7D7C7C] font-black text-3xl">
+                  2511
+                </h1>
+                <h1 className="uppercase text-[#7D7C7C]/60 font-light text-xl mt-1.5">
+                  number of students
+                </h1>
+                <h1 className="uppercase text-primaryDark font-black text-3xl">
+                  2511
+                </h1>
               </div>
+
+              <div className="col-span-4 p-4 pb-0">
+                <h1 className="font-light text[#7D7D7D] mb-1.5">Background</h1>
+                <p className="text-[#7D7D7D] font-semibold">Science</p>
+              </div>
+
+              <div className="col-span-4 p-4 pb-0">
+                <h1 className="font-light text[#7D7D7D] mb-1.5">Background</h1>
+                <p className="text-[#7D7D7D] font-semibold">Science</p>
+              </div>
+              <div className="col-span-6"></div>
             </div>
-            <div className="col-span-6 p-4 pb-0">
-              <h1 className="font-light text[#7D7D7D] mb-1.5">Background</h1>
-              <p className="text-[#7D7D7D] font-semibold">Science</p>
+
+            <div className="grid grid-cols-12 space-x-4">
+              <div className="col-span-8">
+                <UpcommingSessions />
+              </div>
+              <div className="col-span-4">
+                <TotalClassCompleted />
+              </div>
+              <div className="col-span-6"></div>
             </div>
-            <div className="col-span-6"></div>
           </div>
         </div>
       </AdminLayout>
