@@ -18,6 +18,10 @@ type Props = {
 
 const Dashboard = ({ children }: Props) => {
   const { data: session, status } = useSession();
+  const token = session?.user?.email;
+  useEffect(() => {
+    if (token) localStorage.setItem("heiloUserToken", token);
+  }, [token]);
   const router = useRouter();
   useEffect(() => {
     if (status === "unauthenticated") router.replace("/");

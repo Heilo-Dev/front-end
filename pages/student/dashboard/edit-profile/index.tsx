@@ -1,7 +1,8 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import EditProfile from "../../../../components/student/dashboard/edit-profile/edit-profile";
 import { DashboardLayout } from "../../../../layouts";
+import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
 
 type Props = {};
 

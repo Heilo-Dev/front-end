@@ -9,6 +9,7 @@ type Props = {
 };
 
 const StudentInfoCard = ({ userInfo }: Props) => {
+  console.log(userInfo);
   return (
     <div className="grayDiv rounded-3xl p-8 mt-16">
       <div className="mt-[-90px] mb-6 mx-auto w-fit relative">

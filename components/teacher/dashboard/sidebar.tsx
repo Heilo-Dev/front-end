@@ -56,6 +56,7 @@ const TeacherSidebar = (props: Props) => {
         <button
           onClick={() => {
             signOut({ redirect: false });
+            localStorage.removeItem("heiloUserToken")
             router.push("/");
           }}
           className="flex items-center mr-5"
