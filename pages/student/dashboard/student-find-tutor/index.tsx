@@ -24,7 +24,7 @@ const StudentFindTutor = (props: Props) => {
     };
     getUserToken();
 
-    const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
+  const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
 
     axios
       .get(url, {
@@ -64,11 +64,11 @@ const StudentFindTutor = (props: Props) => {
               </Scrollbar>
             </div>
           </div>
-          <div className="col-span-4 mt-24 bg-bgAccent px-6 rounded-2xl h-[77vh]">
+          <div className="col-span-4 mt-24 bg-bgAccent px-6 rounded-2xl h-fit">
             <h1 className="text-primaryDark text-md capitalize mt-2">
               notifications
             </h1>
-            <Scrollbar style={{ height: "calc(85vh - 100px)" }}>
+            <Scrollbar style={{ height: "calc(80vh - 100px)" }}>
               <Notification />
               <Notification />
               <Notification />

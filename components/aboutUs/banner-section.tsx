@@ -1,6 +1,6 @@
 import React from "react";
 import book from "../../assets/img/book.png";
-import { QuoteLeft, QuoteLeftIcon } from "../icons/quote-left-icon";
+import { QuoteLeft} from "../icons/quote-left-icon";
 import { QuoteRight } from "../icons/quote-right-icon";
 type Props = {};
 

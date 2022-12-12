@@ -1,23 +1,55 @@
+import axios from "axios";
 import React from "react";
+import { APIEndpoints } from "../../../../data";
 import { InputBox } from "../../../inputs";
-
-type Props = {};
+type Props = {
+  basic: any;
+};
 
 const BasicInfo = (props: Props) => {
+  const { basic } = props;
+  console.log(basic);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem("heiloUserToken");
+    console.log(token);
+    const { name, phoneNumber, gender, village, division } = e.target;
+    const basicInfo = {
+      name: name.value,
+      phoneNumber: phoneNumber.value,
+      gender: gender.value,
+      village: village.value,
+      division: division.value,
+    };
+    console.log(basicInfo);
+    const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/update`;
+    console.log(url);
+    fetch(url, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(basicInfo),
+    }).then((res) => console.log(res));
+  };
   return (
-    <section className="bg-bgAccent rounded-lg p-4 mb-8">
-      <div className="flex justify-between">
-        <p className="bg-primaryLight text-[#FFFFFF] px-6 py-1 rounded-full inline">
-          Basic Information
-        </p>
-        <button className="btnPrimary bg-[#C4C4C4] text-primaryDark px-6 py-1 rounded-full font-normal">
-          save
-        </button>
-      </div>
-      <div className="my-6">
-        <form action="">
+    <div className="bg-bgAccent rounded-lg p-4 mb-8">
+      <form action="" onSubmit={handleSubmit}>
+        <div className="flex justify-between">
+          <p className="bg-primaryLight text-[#FFFFFF] px-6 py-1 rounded-full inline">
+            Basic Information
+          </p>
+          <button
+            type="submit"
+            className="btnPrimary bg-[#C4C4C4] text-primaryDark px-6 py-1 rounded-full font-normal"
+          >
+            save
+          </button>
+        </div>
+        <div className="my-6">
           <div className="grid grid-cols-3 gap-4">
-            {/* name */}
+            {/* name village divission */}
 
             <div>
               <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
@@ -28,7 +60,9 @@ const BasicInfo = (props: Props) => {
                 <InputBox
                   className="border-none bg-bgAccent py-0 m-0"
                   onChange={() => {}}
-                  placeholder="sakib abdullah"
+                  name="name"
+                  required
+                  placeholder={basic?.name}
                 />
               </div>
               <div className="flex mt-2 space-x-2">
@@ -39,25 +73,29 @@ const BasicInfo = (props: Props) => {
                   <br />
                   <InputBox
                     className="border-none bg-bgAccent py-0 m-0"
+                    name="division"
+                    required
                     onChange={() => {}}
-                    placeholder="sakib abdullah"
+                    placeholder={basic?.division}
                   />
                 </div>
                 <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                   <label className="text-[#7D7D7D]" htmlFor="">
-                    Villag,
+                    Village,
                   </label>
                   <br />
                   <InputBox
                     className="border-none bg-bgAccent py-0 m-0"
+                    name="village"
+                    required
                     onChange={() => {}}
-                    placeholder="sakib abdullah"
+                    placeholder={basic?.village}
                   />
                 </div>
               </div>
             </div>
 
-            {/* contact number */}
+            {/* email and gender */}
 
             <div>
               <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
@@ -67,20 +105,26 @@ const BasicInfo = (props: Props) => {
                 <br />
                 <InputBox
                   className="border-none bg-bgAccent py-0 m-0"
+                  name="email"
                   onChange={() => {}}
-                  placeholder="sakib.abdullah@gmail.com"
+                  readonly
+                  placeholder={basic?.email}
                 />
               </div>
-              <div className=" w-fit rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
+              <div className=" w-64 rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
-                  email
-                </label>
+                  Gender
+                </label>{" "}
                 <br />
-                <InputBox
+                <select
                   className="border-none bg-bgAccent py-0 m-0"
+                  name="gender"
                   onChange={() => {}}
-                  placeholder="sakib.abdullah@gmail.com"
-                />
+                  defaultValue="male/female"
+                >
+                  <option value="male">male</option>
+                  <option value="female">female</option>
+                </select>
               </div>
             </div>
 
@@ -93,15 +137,17 @@ const BasicInfo = (props: Props) => {
               <br />
               <InputBox
                 className="border-none bg-bgAccent py-0 m-0"
+                name="phoneNumber"
                 type="number"
+                required
                 onChange={() => {}}
-                placeholder="01765646564"
+                placeholder={basic?.phoneNumber}
               />
             </div>
           </div>
-        </form>
-      </div>
-    </section>
+        </div>
+      </form>
+    </div>
   );
 };
 

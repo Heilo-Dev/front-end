@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import logo from "../../../assets/img/logo-white.png";
+import logo from "../../assets/img/logo-white.png";
 import { signOut } from "next-auth/react";
 import {
   GraduationCap,
@@ -11,42 +11,35 @@ import {
   EmailIcon,
   LogoutIcon,
   WalletIcon,
-} from "../../../components";
-import { LocalImage } from "../../image-snippents";
+} from "../../components";
+import { LocalImage } from "..//image-snippents";
+import AdminMenuItem from "./admin-mentu-item";
 
 type Props = {};
 
-const TeacherSidebar = (props: Props) => {
+const AdminSidebar = (props: Props) => {
   const router = useRouter();
   return (
-    <div className="h-full w-60 flex flex-col items-center justify-between">
+    <div className="h-full w-24 flex flex-col items-center justify-between">
       <div className="mt-4 mr-3 cursor-pointer">
-        <LocalImage src={logo} width={100} />
+        <LocalImage src={logo} width={80} />
       </div>
 
       <ul className="w-full h-96">
-        <DashboardMenuItem
-          title="dashboard"
-          icon={<Laptop width={28} />}
-          path="/teacher/dashboard"
-        />
-        <DashboardMenuItem
-          title="profile"
+        <AdminMenuItem icon={<Laptop width={28} />} path="/admin/teacher" />
+        <AdminMenuItem
           icon={<ProfileIcon width={22} />}
           path="/teacher/dashboard/profile"
         />
-        <DashboardMenuItem
-          title="edit-profile"
+        <AdminMenuItem
           icon={<EditProfileIcon width={30} />}
           path="/teacher/dashboard/edit-profile"
         />
-        <DashboardMenuItem
-          title="Wallet"
+        <AdminMenuItem
           icon={<WalletIcon width={26} />}
           path="/teacher/dashboard/wallet"
         />
-        <DashboardMenuItem
-          title="inbox"
+        <AdminMenuItem
           icon={<EmailIcon width={26} />}
           path="/teacher/dashboard/inbox"
         />
@@ -56,19 +49,17 @@ const TeacherSidebar = (props: Props) => {
         <button
           onClick={() => {
             signOut({ redirect: false });
-            localStorage.removeItem("heiloUserToken")
             router.push("/");
           }}
           className="flex items-center mr-5"
         >
-          <div className="bg-white py-5 px-3 h-20 rounded-tl-full rounded-tr-full flex items-center">
+          <div className="bg-white py-3 px-3 h-20 rounded-tl-full rounded-tr-full">
             <LogoutIcon width={26} className="text-primaryDark" />
           </div>
-          <h1 className="ml-2.5 text-white">Log Out</h1>
         </button>
       </div>
     </div>
   );
 };
 
-export default TeacherSidebar;
+export default AdminSidebar;

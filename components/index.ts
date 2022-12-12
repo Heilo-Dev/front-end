@@ -38,6 +38,10 @@ import { WalletIcon } from "./icons/teacher-dashboard/laptop";
 import TutionRequestTile from "./teacher/dashboard/tution-request-tile";
 import { CircleCheckIcon } from "./icons/teacher-dashboard/circle-check-icon";
 import { CircleCrossIcon } from "./icons/teacher-dashboard/circle-cross-icon";
+import UpcommingSessions from "./admin/upcomming-sessions";
+import SessionItem from "./admin/session-item";
+import { SearchIcon } from "./icons/admin-teacher/search-icon";
+import TotalClassCompleted from "./admin/total-class-completed";
 
 export {
   BtnPrimary,
@@ -81,4 +85,8 @@ export {
   TutionRequestTile,
   CircleCheckIcon,
   CircleCrossIcon,
+  UpcommingSessions,
+  SessionItem,
+  SearchIcon,
+  TotalClassCompleted,
 };

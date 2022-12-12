@@ -15,11 +15,13 @@ type Props = {};
 const Profile = (props: Props) => {
   const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
   const { data, error, isLoading, isFetching, isSuccess } =
-    useGetUserInfoQuery();
+    useGetUserInfoQuery("");
 
   useEffect(() => {
     if (data) setUserInfo(data.result);
   }, [data]);
+
+  console.log(userInfo);
 
   return (
     <div>

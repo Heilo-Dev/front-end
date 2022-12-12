@@ -1,22 +1,31 @@
 type InputProps = {
+  name:string;
   type?: string;
   placeholder: string;
   onChange: (e: any) => void;
   className?: string;
+  readonly?:boolean;
+  required?:boolean;
 };
 
 export const InputBox = ({
   type = "text",
+  name,
   placeholder,
   onChange,
   className,
+  readonly,
+  required
 }: InputProps) => {
   return (
     <input
       onChange={onChange}
       className={`form-input ${className}`}
       type={type}
+      name={name}
       placeholder={placeholder}
+      readOnly={readonly}
+      required={required}
     />
   );
 };
@@ -51,7 +60,7 @@ export const CheckBox = ({ onChange }: CheckBoxProps) => {
 
 type RoundedCheckBoxProps = {
   onChange: (e: any) => void;
-  value:string;
+  value: string;
 };
 
 export const RoundedCheckBox = (props: RoundedCheckBoxProps) => {
