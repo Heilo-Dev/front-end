@@ -42,6 +42,11 @@ import UpcommingSessions from "./admin/upcomming-sessions";
 import SessionItem from "./admin/session-item";
 import { SearchIcon } from "./icons/admin-teacher/search-icon";
 import TotalClassCompleted from "./admin/total-class-completed";
+import ActivityScale from "./admin/activity-scale";
+import TotalQuizScale from "./admin/quiz/total-quiz-scale";
+import AdminQuizDashboardCard from "./admin/quiz/dashboard-card";
+import QuizRatingCard from "./admin/quiz/quiz-rating-card";
+import AverageRating from "./admin/quiz/average-rating";
 
 export {
   BtnPrimary,
@@ -89,4 +94,9 @@ export {
   SessionItem,
   SearchIcon,
   TotalClassCompleted,
+  ActivityScale,
+  TotalQuizScale,
+  AdminQuizDashboardCard,
+  QuizRatingCard,
+  AverageRating,
 };
