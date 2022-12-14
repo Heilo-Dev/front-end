@@ -19,7 +19,7 @@ const TotalClassCompleted = (props: Props) => {
         </select>
       </div>
       <div className="p-4">
-        <Scrollbar style={{ height: "calc(100vh - 320px)" }}>
+        <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
           <table className="w-full">
             <thead className="sticky top-0 bg-[#f1f1f1]">
               <tr className="capitalize text-[#7d7d7d]">
