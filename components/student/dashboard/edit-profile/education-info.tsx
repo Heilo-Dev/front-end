@@ -5,18 +5,19 @@ import { InputBox } from "../../../inputs";
 type Props = {};
 
 const EducationInfo = (props: Props) => {
-  const data=useUpdateEducationMutation();
-  const editEducation = (e:any) => {
+  const [updateEducation, response] = useUpdateEducationMutation();
+  const editEducation = (e: any) => {
     e.preventDefault();
     const { institute, medium, background } = e.target;
-    const education= {
+    const education = {
       currentInstitution: {
-          name: institute.value,
-          department: background.value,
-          session: "2016"
-      }
-    }
-   console.log(data)
+        name: institute.value,
+        department: background.value,
+        session: "2016",
+      },
+    };
+    updateEducation(education);
+    console.log(response);
   };
   return (
     <section className="bg-bgAccent rounded-lg p-4 mb-8">
