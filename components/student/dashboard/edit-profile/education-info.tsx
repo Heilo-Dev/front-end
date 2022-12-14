@@ -1,21 +1,39 @@
 import React from "react";
+import { useUpdateEducationMutation } from "../../../../redux/slices/apiSlice";
 import { InputBox } from "../../../inputs";
 
 type Props = {};
 
 const EducationInfo = (props: Props) => {
+  const [updateEducation, response] = useUpdateEducationMutation();
+  const editEducation = (e: any) => {
+    e.preventDefault();
+    const { institute, medium, background } = e.target;
+    const education = {
+      currentInstitution: {
+        name: institute.value,
+        department: background.value,
+        session: "2016",
+      },
+    };
+    updateEducation(education);
+    console.log(response);
+  };
   return (
     <section className="bg-bgAccent rounded-lg p-4 mb-8">
-      <div className="flex justify-between">
-        <p className="bg-primaryLight text-[#FFFFFF] px-6 py-1 rounded-full inline">
-          Education
-        </p>
-        <button className="btnPrimary bg-[#C4C4C4] text-primaryDark px-6 py-1 rounded-full font-normal">
-          save
-        </button>
-      </div>
-      <div className="my-6">
-        <form action="">
+      <form action="" onSubmit={editEducation}>
+        <div className="flex justify-between">
+          <p className="bg-primaryLight text-[#FFFFFF] px-6 py-1 rounded-full inline">
+            Education
+          </p>
+          <button
+            type="submit"
+            className="btnPrimary bg-[#C4C4C4] text-primaryDark px-6 py-1 rounded-full font-normal"
+          >
+            save
+          </button>
+        </div>
+        <div className="my-6">
           <div className="grid grid-cols-2 gap-4">
             {/* current institute */}
 
@@ -25,6 +43,8 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <InputBox
+                required
+                name="institute"
                 className="border-none bg-bgAccent py-0 m-0"
                 onChange={() => {}}
                 placeholder="sakib.abdullah@gmail.com"
@@ -37,13 +57,14 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="class"
+              >
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
               </select>
             </div>
 
@@ -55,13 +76,12 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="medium"
+              >
+                <option value="english">english</option>
+                <option value="bangla">bangla</option>
               </select>
             </div>
             <div className=" w-full h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
@@ -70,18 +90,18 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="background"
+              >
+                <option value="Science">Science</option>
+                <option value="Huminities">Huminities</option>
+                <option value="Bussiness studies">Bussiness studies</option>
               </select>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
   );
 };

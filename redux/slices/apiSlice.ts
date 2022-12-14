@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { APIEndpoints } from "../../data";
+import { CurrentInstitue, Education,} from "../../types/user";
 
 var token: string | null;
 const getUserToken = async () => {
@@ -26,9 +27,20 @@ export const userApi = createApi({
     getUserInfo: builder.query({
       query: () => APIEndpoints.getUserInfo,
     }),
+    updateEducation:builder.mutation<Education,{}>({
+      query: (payload) => ({
+        url: `${APIEndpoints.studentInfo}/update`,
+        method: 'PATCH',
+        body: payload,
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      }),
+    }),
+
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetUserInfoQuery } = userApi;
+export const { useGetUserInfoQuery,useUpdateEducationMutation } = userApi;

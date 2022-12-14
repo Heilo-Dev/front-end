@@ -18,7 +18,7 @@ const UpcommingSessions = (props: Props) => {
         <SearchIcon className="w-6 mr-3 text-[#7d7d7d]" />
       </div>
       <div className="p-4">
-        <Scrollbar style={{ height: "calc(100vh - 320px)" }}>
+        <Scrollbar style={{ height: "calc(100vh - 367px)" }}>
           <SessionItem />
           <SessionItem />
           <SessionItem />
