@@ -1,8 +1,8 @@
 import React from "react";
-import AccessControl from "../../../components/admin/techer/acces-control";
-import Due from "../../../components/admin/techer/due";
-import Paid from "../../../components/admin/techer/paid";
-import PaymentRequest from "../../../components/admin/techer/payment-request";
+import AccessControl from "../../../components/admin/teacher/acces-control";
+import Due from "../../../components/admin/teacher/due";
+import Paid from "../../../components/admin/teacher/paid";
+import PaymentRequest from "../../../components/admin/teacher/payment-request";
 import { AdminLayout } from "../../../layouts";
 
 type Props = {};

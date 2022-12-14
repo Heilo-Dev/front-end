@@ -19,3 +19,13 @@ export interface UserInfo {
   updatedAt: string;
   __v: number;
 }
+
+export interface Education {
+  currentInstitue:object;
+  institute: string;
+  name: string;
+  department: string;
+  session: string;
+  created_at: string;
+  updated_at: string;
+}
