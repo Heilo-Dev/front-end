@@ -31,9 +31,9 @@ export const userApi = createApi({
       query: (payload) => ({
         url: `${APIEndpoints.studentInfo}/update`,
         method: 'PATCH',
-        body: payload,
+        body: JSON.stringify(payload),
         headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+          'Content-type': 'application/json;',
         },
       }),
     }),

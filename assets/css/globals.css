@@ -116,32 +116,38 @@ body {
   z-index: -1;
 }
 
-
-select{
+select {
   appearance: none;
   border: none;
 }
 
-table{
+table {
   border-collapse: separate;
 }
 
-thead{
+thead {
   border-radius: 20px;
   margin-bottom: 8px;
 }
 
-tbody{
+tbody {
   padding-top: 30px;
 }
 
-th{
-  border-right: 2px solid #B9B9B9;
+th {
+  border-right: 2px solid #b9b9b9;
 }
 
-td{
+td {
   border-bottom: 4px solid white;
   padding-bottom: 10px;
   padding-top: 20px;
 }
-
+.custom-td {
+  border-right: 2px solid #01B489;
+  border-bottom: none;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
