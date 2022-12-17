@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import wave from "../assets/img/wave2.png";
 import { BtnPrimary, InputBox, LocalImage } from "../components";
+import { toast } from "react-hot-toast";
 
 type Props = {};
 
@@ -15,9 +16,10 @@ const Login = (props: Props) => {
 
   const handleLogin = async () => {
     if (!email || !password) {
-      alert("Please fill up all fields");
+      toast.error("Please fill up all fields");
       return;
     }
+    toast.loading("Waiting for Response");
 
     const data = {
       email: email,
@@ -26,10 +28,15 @@ const Login = (props: Props) => {
 
     const res: any = await signIn("credentials", { ...data, redirect: false });
     console.log(res?.status);
+    toast.dismiss();
+
     if (res?.status !== 200) {
-      alert("Invalid email or password");
+      toast.error("Invalid email or password");
       return;
-    } else router.push("/student/dashboard");
+    } else {
+      toast.success("Login Successful");
+      router.push("/student/dashboard");
+    }
   };
 
   return (
