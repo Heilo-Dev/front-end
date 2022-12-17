@@ -1,11 +1,11 @@
 type InputProps = {
-  name:string;
+  name?: string;
   type?: string;
   placeholder: string;
   onChange: (e: any) => void;
   className?: string;
-  readonly?:boolean;
-  required?:boolean;
+  readonly?: boolean;
+  required?: boolean;
 };
 
 export const InputBox = ({
@@ -15,7 +15,7 @@ export const InputBox = ({
   onChange,
   className,
   readonly,
-  required
+  required,
 }: InputProps) => {
   return (
     <input

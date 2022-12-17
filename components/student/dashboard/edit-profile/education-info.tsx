@@ -1,4 +1,5 @@
 import React from "react";
+import { APIEndpoints } from "../../../../data";
 import { useUpdateEducationMutation } from "../../../../redux/slices/apiSlice";
 import { InputBox } from "../../../inputs";
 
@@ -8,16 +9,22 @@ const EducationInfo = (props: Props) => {
   const [updateEducation, response] = useUpdateEducationMutation();
   const editEducation = (e: any) => {
     e.preventDefault();
+    const token = localStorage.getItem("heiloUserToken");
     const { institute, medium, background } = e.target;
-    const education = {
-      currentInstitution: {
-        name: institute.value,
-        department: background.value,
-        session: "2016",
-      },
+    const currentInstitution = {
+      name: institute.value,
+      department: background.value,
     };
-    updateEducation(education);
-    console.log(response);
+    fetch(`${process.env.apiUrl}${APIEndpoints.studentInfo}/update`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(currentInstitution),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
   return (
     <section className="bg-bgAccent rounded-lg p-4 mb-8">

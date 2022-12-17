@@ -11,7 +11,7 @@ type Props = {};
 const EditProfile = (props: Props) => {
 
   const { data, error, isLoading, isFetching, isSuccess } =
-    useGetUserInfoQuery();
+    useGetUserInfoQuery('');
   // const url=process.env.apiUrl + APIEndpoints.student;
 
   // axios
