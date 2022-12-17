@@ -6,20 +6,28 @@ type Props = {};
 
 const CompletedSessions = (props: Props) => {
   return (
-    <div className="bg-[#EBEBEB] rounded-2xl p-8 relative">
-      <span className="bg-white px-3 rounded-xl absolute top-[-10px] left-[-4px]">
+    <div className="grayDiv p-3 rounded-3xl">
+      <div className="titleTab bg-white font-semibold text-[#7d7d7d]">
         Completed Sessions
-      </span>
-      <Scrollbar style={{ height: "calc(45vh - 120px)" }}>
-        <Session />
-        <Session />
-        <Session />
-        <Session />
-        <Session />
-        <Session />
-        <Session />
-        <Session />
-      </Scrollbar>
+      </div>
+      <div className="px-4">
+        <div className="py-1 my-2 rounded-3xl px-3">
+          <table className="table-auto w-full">
+            <tbody>
+              <Scrollbar style={{ height: "calc(45vh - 150px)" }}>
+                <Session />
+                <Session />
+                <Session />
+                <Session />
+                <Session />
+                <Session />
+                <Session />
+                <Session />
+              </Scrollbar>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

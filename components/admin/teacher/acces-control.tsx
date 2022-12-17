@@ -18,7 +18,7 @@ const AccessControl = (props: Props) => {
         />
         <SearchIcon color="#BDBDBD" width={30} />
       </div>
-      <Scrollbar className="mt-8" style={{ height: "calc(90vh - 80px)" }}>
+      <Scrollbar className="mt-8" style={{ height: "calc(100vh - 150px)" }}>
         <ActionCard />
         <ActionCard />
         <ActionCard />

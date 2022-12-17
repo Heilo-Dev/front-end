@@ -7,7 +7,7 @@ const ActionCard = (props: Props) => {
     <div className="bg-white w-fit mx-auto mb-4 pl-3 rounded-full py-[2px] flex">
       <div>
         <h1 className="capitalize text-sm">ruhul amin tusher</h1>
-        <div className="flex justify-start space-x-2 text-sm">
+        <div className="flex justify-start space-x-2 text-xs">
           <p className="">01824696930</p>
           <p>writetusar@gmail.com</p>
         </div>
