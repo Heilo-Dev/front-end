@@ -64,13 +64,13 @@ export default class ActivityScale extends PureComponent {
     activeIndex: 0,
   };
 
-  handleClick = (data, index) => {
+  handleClick = (data: any, index: any) => {
     this.setState({
       activeIndex: index,
     });
   };
 
-  CustomTooltip = ({ active, payload, label }) => {
+  CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-primaryLight p-1.5 text-white">
