@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 
 type LocalImageProps = {
   src: StaticImageData;
-  width?: number | string;
-  height?: number | string;
+  width?: number;
+  height?: number;
   alt?: string;
   link?: string;
   layout?: string;
