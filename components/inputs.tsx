@@ -45,7 +45,7 @@ export const SelectBox = ({ onChange }: SelectProps) => {
 
 type CheckBoxProps = {
   onChange: (e: any) => void;
-  className: String;
+  className?: String;
 };
 
 export const CheckBox = ({ onChange }: CheckBoxProps) => {
