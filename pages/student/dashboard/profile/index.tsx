@@ -14,8 +14,8 @@ type Props = {};
 
 const Profile = (props: Props) => {
   const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
-  const { data, error, isLoading, isFetching, isSuccess } =
-    useGetUserInfoQuery("");
+  const { data, error, isLoading, isFetching, isSuccess }: any =
+    useGetUserInfoQuery();
 
   useEffect(() => {
     if (data) setUserInfo(data.result);
