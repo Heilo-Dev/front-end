@@ -26,7 +26,7 @@ export const authOptions: NextAuthOptions = {
         const res: any = await axios
           .post(url, data)
           .then((data) => data)
-          .catch((error) => json(error));
+          .catch((error) =>error);
 
         if (res) {
           // Any object returned will be saved in `user` property of the JWT
