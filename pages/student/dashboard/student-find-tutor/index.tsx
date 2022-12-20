@@ -8,11 +8,12 @@ import Scrollbar from "../../../../components/ui/scrollbar";
 import { APIEndpoints } from "../../../../data";
 import { DashboardLayout } from "../../../../layouts";
 import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
+import { UserInfo } from "../../../../types/user";
 
 type Props = {};
 
 const StudentFindTutor = (props: Props) => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<UserInfo[]>([]);
   const [gender, setGender] = useState("");
   const [subject, setSubject] = useState("");
 
@@ -24,7 +25,7 @@ const StudentFindTutor = (props: Props) => {
     };
     getUserToken();
 
-  const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
+    const url = `${process.env.apiUrl}${APIEndpoints.studentInfo}/ondemand?gender=${gender}&subject=${subject}`;
 
     axios
       .get(url, {
@@ -35,10 +36,10 @@ const StudentFindTutor = (props: Props) => {
       .then((data) => setUsers(data.data.result));
   }, [gender, subject]);
 
-  const getGender = (e) => {
+  const getGender = (e: any) => {
     setGender(e.target.value);
   };
-  const getSubject = (e) => {
+  const getSubject = (e: any) => {
     setSubject(e.target.value);
   };
   return (
@@ -58,7 +59,7 @@ const StudentFindTutor = (props: Props) => {
                 <div className="px-6">
                   {users &&
                     users.map((user) => (
-                      <AvailableTutor key={user._id} user={user} />
+                      <AvailableTutor key={user?._id} user={user} />
                     ))}
                 </div>
               </Scrollbar>

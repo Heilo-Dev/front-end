@@ -4,7 +4,8 @@ import Slider from "rc-slider";
 import { InputBox, RoundedCheckBox } from "../../../inputs";
 
 type Props = {
-  handleChange: string;
+  getGender: (e: any) => void;
+  getSubject: (e: any) => void;
 };
 
 const SearchBar = (props: Props) => {

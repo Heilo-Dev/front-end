@@ -4,11 +4,10 @@ import tutor from "../../../assets/img/tutor.png";
 // import { UserInfo } from "../../../types/user";
 
 type Props = {
-  // user: UserInfo
+  user: any;
 };
 
-const AvailableTutor = (props: Props) => {
-  const { user }: any = props;
+const AvailableTutor = ({ user }: Props) => {
   return (
     <div>
       <div className="py-3 mb-4 px-8 bg-bgAccent h-[128px] rounded-lg">
@@ -16,7 +15,7 @@ const AvailableTutor = (props: Props) => {
           <Image src={tutor} alt="tutor avatar" />
           <div className="grid grid-cols-2 gap-x-12 mx-auto h-[100%]">
             <p>{user?.name}</p>
-            <p>{user?.education?.currentInstitution?.name}</p>
+            <p>{user?.education?.currentInstitue?.name}</p>
             <p>address</p>
             <p>subject</p>
           </div>
