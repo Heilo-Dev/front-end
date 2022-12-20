@@ -9,9 +9,8 @@ import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
 type Props = {};
 
 const EditProfile = (props: Props) => {
-
-  const { data, error, isLoading, isFetching, isSuccess } =
-    useGetUserInfoQuery('');
+  const { data, error, isLoading, isFetching, isSuccess }: any =
+    useGetUserInfoQuery();
   // const url=process.env.apiUrl + APIEndpoints.student;
 
   // axios
