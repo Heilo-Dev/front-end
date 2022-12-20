@@ -5,7 +5,7 @@ import { UserInfo } from "../../../types/user";
 import { StarIcon } from "../../icons/student-dashboard/star-icon";
 
 type Props = {
-  userInfo: UserInfo | undefined;
+  userInfo?: UserInfo | undefined;
 };
 
 const StudentInfoCard = ({ userInfo }: Props) => {
