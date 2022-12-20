@@ -4,7 +4,7 @@ import tutor from "../../../assets/img/tutor.png";
 // import { UserInfo } from "../../../types/user";
 
 type Props = {
-  user: any;
+  user?: any;
 };
 
 const AvailableTutor = ({ user }: Props) => {
