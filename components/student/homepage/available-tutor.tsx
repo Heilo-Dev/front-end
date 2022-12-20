@@ -1,11 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import tutor from "../../../assets/img/tutor.png";
+// import { UserInfo } from "../../../types/user";
 
-type Props = {};
+type Props = {
+  // user: UserInfo
+};
 
 const AvailableTutor = (props: Props) => {
-  const { user } = props;
+  const { user }: any = props;
   return (
     <div>
       <div className="py-3 mb-4 px-8 bg-bgAccent h-[128px] rounded-lg">
