@@ -3,14 +3,15 @@ import { DashboardLayout } from "../../../layouts";
 import { useSession } from "next-auth/react";
 import {
   DashboardCard,
-  LocalImage,
-  Notification,
   NotificationTile,
   Scrollbar,
-  SessionTile,
+  StudentUpcommingSessions,
+  StudentTutionCompleted,
+  StudentQuizAppeared,
+  StudentFavouriteTutors,
 } from "../../../components";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ type Props = {
 
 const Dashboard = ({ children }: Props) => {
   const { data: session, status } = useSession();
+  const [selectedCard, setSelectedCard] = useState(1);
   const token = session?.user?.email;
   useEffect(() => {
     if (token) localStorage.setItem("heiloUserToken", token);
@@ -56,60 +58,51 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <div className="px-6 mt-6">
+        <div className="px-4 mt-6">
           <div className="flex justify-between">
             <DashboardCard
               cardName="Upcoming Sessions"
               amount="03"
-              color1="bg-[#5F5F5F]"
-              color2="text-[#02A17B]"
-              color3="text-[#45E7C0]"
-              textColor="text-[#fff]"
+              cardNumber={1}
+              color1="text-[#02A17B]"
+              color2="text-[#45E7C0]"
+              selectedCard={selectedCard}
+              setSelectedCard={setSelectedCard}
             />
             <DashboardCard
               cardName="Tutions completed"
               amount="53"
-              color1="bg-[#F5F5F5]"
-              color2="text-[#00758F]"
-              color3="text-[#45DDE7]"
-              textColor="text-[#000]"
+              cardNumber={2}
+              color1="text-[#00758F]"
+              color2="text-[#45DDE7]"
+              selectedCard={selectedCard}
+              setSelectedCard={setSelectedCard}
             />
             <DashboardCard
               cardName="Quiz Appeared"
               amount="13"
-              color1="bg-[#F5F5F5]"
-              color2="text-[#FFA800]"
-              color3="text-[#FAE0BA]"
-              textColor="text-[#000]"
+              cardNumber={3}
+              color1="text-[#FFA800]"
+              color2="text-[#FAE0BA]"
+              selectedCard={selectedCard}
+              setSelectedCard={setSelectedCard}
             />
             <DashboardCard
-              cardName="Upcoming Sessions"
+              cardName="Favourite Tutors"
               amount="09"
-              color1="bg-[#F5F5F5]"
-              color2="text-[#DA4453]"
-              color3="text-[#FB9999]"
-              textColor="text-transparent"
+              cardNumber={4}
+              color1="text-[#DA4453]"
+              color2="text-[#FB9999]"
+              selectedCard={selectedCard}
+              setSelectedCard={setSelectedCard}
             />
           </div>
 
           <div className="flex space-x-8">
-            <div className="grayDiv mt-8 p-1 w-full px-3">
-              <h1 className="text-textSecondary bg-white titleTab font-semibold my-2">
-                Upcoming Sessions
-              </h1>
-              <div className="px-5">
-                <Scrollbar style={{ height: "calc(100vh - 360px)" }}>
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                  <SessionTile />
-                </Scrollbar>
-              </div>
-            </div>
+            {selectedCard === 1 && <StudentUpcommingSessions />}
+            {selectedCard === 2 && <StudentTutionCompleted />}
+            {selectedCard === 3 && <StudentQuizAppeared />}
+            {selectedCard === 4 && <StudentFavouriteTutors />}
             <div className="grayDiv mt-8 p-1 w-full px-5">
               <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
                 Notifications

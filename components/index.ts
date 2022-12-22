@@ -47,6 +47,11 @@ import TotalQuizScale from "./admin/quiz/total-quiz-scale";
 import AdminQuizDashboardCard from "./admin/quiz/dashboard-card";
 import QuizRatingCard from "./admin/quiz/quiz-rating-card";
 import AverageRating from "./admin/quiz/average-rating";
+import StudentUpcommingSessions from "./student/dashboard/student-upcomming-sessions";
+import StudentTutionCompleted from "./student/dashboard/student-tution-completed";
+import StudentQuizAppeared from "./student/dashboard/student-quiz-appeared";
+import StudentFavouriteTutors from "./student/dashboard/student-favourite-tutors";
+import FavouriteTutorTile from "./student/dashboard/favourite-tutor-tile";
 
 export {
   BtnPrimary,
@@ -99,4 +104,9 @@ export {
   AdminQuizDashboardCard,
   QuizRatingCard,
   AverageRating,
+  StudentUpcommingSessions,
+  StudentTutionCompleted,
+  StudentQuizAppeared,
+  StudentFavouriteTutors,
+  FavouriteTutorTile,
 };
