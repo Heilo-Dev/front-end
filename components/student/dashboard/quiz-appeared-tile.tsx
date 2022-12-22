@@ -1,5 +1,4 @@
 import React from "react";
-import { StarIcon } from "../../icons/student-dashboard/star-icon";
 import QuizAppeared1 from "../../../assets/img/quiz-appeared1.png";
 import QuizAppeared2 from "../../../assets/img/quiz-appeared2.png";
 import { LocalImage } from "../../image-snippents";
