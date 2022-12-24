@@ -52,6 +52,9 @@ import StudentTutionCompleted from "./student/dashboard/student-tution-completed
 import StudentQuizAppeared from "./student/dashboard/student-quiz-appeared";
 import StudentFavouriteTutors from "./student/dashboard/student-favourite-tutors";
 import FavouriteTutorTile from "./student/dashboard/favourite-tutor-tile";
+import PackagePurchaseCard from "./student/dashboard/wallet/package-purchase-card";
+import TransactionHistoryTable from "./student/dashboard/wallet/transaction-history-table";
+import TeacherBalanceCard from "./teacher/dashboard/wallet/teacher-balance-card";
 
 export {
   BtnPrimary,
@@ -109,4 +112,7 @@ export {
   StudentQuizAppeared,
   StudentFavouriteTutors,
   FavouriteTutorTile,
+  PackagePurchaseCard,
+  TransactionHistoryTable,
+  TeacherBalanceCard,
 };
