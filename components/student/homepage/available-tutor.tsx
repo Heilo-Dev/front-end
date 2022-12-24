@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import tutor from "../../../assets/img/tutor.png";
+// import { UserInfo } from "../../../types/user";
 
-type Props = {};
+type Props = {
+  user?: any;
+};
 
-const AvailableTutor = (props: Props) => {
-  const { user } = props;
+const AvailableTutor = ({ user }: Props) => {
   return (
     <div>
       <div className="py-3 mb-4 px-8 bg-bgAccent h-[128px] rounded-lg">
@@ -13,7 +15,7 @@ const AvailableTutor = (props: Props) => {
           <Image src={tutor} alt="tutor avatar" />
           <div className="grid grid-cols-2 gap-x-12 mx-auto h-[100%]">
             <p>{user?.name}</p>
-            <p>{user?.education?.currentInstitution?.name}</p>
+            <p>{user?.education?.currentInstitue?.name}</p>
             <p>address</p>
             <p>subject</p>
           </div>

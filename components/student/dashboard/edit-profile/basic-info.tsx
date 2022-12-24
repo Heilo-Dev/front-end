@@ -9,7 +9,7 @@ type Props = {
 const BasicInfo = (props: Props) => {
   const { basic } = props;
   console.log(basic);
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const token = localStorage.getItem("heiloUserToken");
     console.log(token);

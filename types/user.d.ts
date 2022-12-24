@@ -11,6 +11,7 @@ export interface UserInfo {
   email: string;
   phoneNumber: string;
   role: string;
+  education?: Education;
   status: string;
   preferredMedium: any[];
   availability: any[];
@@ -21,9 +22,9 @@ export interface UserInfo {
 }
 
 export interface Education {
-  currentInstitue:object;
+  currentInstitue?: object;
   institute: string;
-  name: string;
+  name?: string;
   department: string;
   session: string;
   created_at: string;

@@ -1,6 +1,7 @@
 import axios from "axios";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { json } from "stream/consumers";
 import { APIEndpoints } from "../../../data";
 
 export const authOptions: NextAuthOptions = {
@@ -25,7 +26,7 @@ export const authOptions: NextAuthOptions = {
         const res: any = await axios
           .post(url, data)
           .then((data) => data)
-          .catch((error) => error);
+          .catch((error) =>error);
 
         if (res) {
           // Any object returned will be saved in `user` property of the JWT
