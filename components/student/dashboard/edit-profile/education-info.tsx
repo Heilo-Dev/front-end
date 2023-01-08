@@ -1,12 +1,16 @@
 import React from "react";
 import { APIEndpoints } from "../../../../data";
-import { useUpdateEducationMutation } from "../../../../redux/slices/apiSlice";
+import {
+  useGetUserInfoQuery,
+  useUpdateEducationMutation,
+} from "../../../../redux/slices/apiSlice";
 import { InputBox } from "../../../inputs";
 
 type Props = {};
 
 const EducationInfo = (props: Props) => {
-  const [updateEducation, response] = useUpdateEducationMutation();
+  const { data } = useGetUserInfoQuery();
+  console.log(data);
   const editEducation = (e: any) => {
     e.preventDefault();
     const token = localStorage.getItem("heiloUserToken");
@@ -54,7 +58,7 @@ const EducationInfo = (props: Props) => {
                 name="institute"
                 className="border-none bg-bgAccent py-0 m-0"
                 onChange={() => {}}
-                placeholder="sakib.abdullah@gmail.com"
+                placeholder={data?.result?.currentInstitution.name}
               />
             </div>
 
