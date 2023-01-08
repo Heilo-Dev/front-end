@@ -6,7 +6,10 @@ import {
   PackagePurchaseCard,
 } from "../../../../components";
 import { DashboardLayout } from "../../../../layouts";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
+import {
+  useGetUserInfoQuery,
+  useGetWalletInfoQuery,
+} from "../../../../redux/slices/apiSlice";
 import { UserInfo } from "../../../../types/user";
 import WalletCard1 from "../../../../assets/img/wallet-card1.png";
 
@@ -15,7 +18,7 @@ type Props = {};
 const StudentWallet = (props: Props) => {
   const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
   const { data, error, isLoading, isFetching, isSuccess }: any =
-    useGetUserInfoQuery();
+    useGetWalletInfoQuery();
 
   useEffect(() => {
     if (data) setUserInfo(data.result);

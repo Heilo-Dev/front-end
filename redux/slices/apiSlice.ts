@@ -48,10 +48,18 @@ export const userApi = createApi({
           'Content-type': 'application/json;',
         },
       }),
+    }),
+    getWalletInfo:builder.query({
+      query:()=>APIEndpoints.getWallet,
     })
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetUserInfoQuery,useUpdateBasicInfoMutation,useUpdateEducationMutation } = userApi;
+export const { 
+  useGetUserInfoQuery,
+  useUpdateBasicInfoMutation,
+  useUpdateEducationMutation,
+  useGetWalletInfoQuery
+} = userApi;
