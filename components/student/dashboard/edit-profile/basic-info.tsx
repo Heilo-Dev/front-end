@@ -48,11 +48,11 @@ const BasicInfo = (props: Props) => {
           </button>
         </div>
         <div className="my-6">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="lg:grid grid-cols-3 gap-4">
             {/* name village divission */}
 
             <div>
-              <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+              <div className="lg:w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
                   Name
                 </label>
@@ -97,8 +97,8 @@ const BasicInfo = (props: Props) => {
 
             {/* email and gender */}
 
-            <div>
-              <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="mt-2 lg:mt-0">
+              <div className="lg:w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
                   email
                 </label>
@@ -111,7 +111,7 @@ const BasicInfo = (props: Props) => {
                   placeholder={basic?.email}
                 />
               </div>
-              <div className=" w-64 rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
+              <div className=" lg:w-64 rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
                   Gender
                 </label>{" "}
@@ -130,7 +130,7 @@ const BasicInfo = (props: Props) => {
 
             {/* contact number */}
 
-            <div className=" w-fit h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="mt-2 lg:mt-0 lg:w-fit h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
               <label className="text-[#7D7D7D]" htmlFor="">
                 Contact Number
               </label>

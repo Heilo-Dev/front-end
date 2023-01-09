@@ -15,9 +15,9 @@ const Profile = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <DashboardLayout>
+      <>
         <EditProfile />
-      </DashboardLayout>
+      </>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { APIEndpoints } from "../../../../data";
 import {
   useGetUserInfoQuery,
@@ -45,7 +45,7 @@ const EducationInfo = (props: Props) => {
           </button>
         </div>
         <div className="my-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="lg:grid space-y-3 lg:space-y-0 grid-cols-2 gap-4">
             {/* current institute */}
 
             <div className=" w-full rounded-lg px-6 border-2 border-[#E0E0E0]">
@@ -58,7 +58,7 @@ const EducationInfo = (props: Props) => {
                 name="institute"
                 className="border-none bg-bgAccent py-0 m-0"
                 onChange={() => {}}
-                placeholder={data?.result?.currentInstitution.name}
+                placeholder={data?.result.currentInstitution.name}
               />
             </div>
 

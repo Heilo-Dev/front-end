@@ -32,7 +32,7 @@ const AccountDetails = (props: Props) => {
     <section className="bg-bgAccent rounded-[30px] p-4 mb-8">
       <form action="" onSubmit={handleChangePassword}>
         <div className="flex justify-between">
-          <div className="flex space-x-3 items-start">
+          <div className="flex flex-col lg:flex-row space-x-3 items-start">
             <p className="bg-primaryLight text-[#FFFFFF] px-6 py-1 rounded-full inline">
               Account Details
             </p>
@@ -46,7 +46,7 @@ const AccountDetails = (props: Props) => {
           </button>
         </div>
         <div className="my-6">
-          <div className="grid grid-cols-2  items-center justify-center">
+          <div className="lg:grid space-y-3 lg:space-y-0 grid-cols-2  items-center justify-center">
             <div className=" w-fit rounded-[30px] mx-auto px-6 border-2 border-[#E0E0E0]">
               <InputBox
                 className="border-none bg-bgAccent text-center mt-4 p-0"

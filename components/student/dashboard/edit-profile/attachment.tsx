@@ -16,8 +16,8 @@ const Attachment = (props: Props) => {
         </button>
       </div>
       <div className="my-6">
-        <form className="w-fit"  action="">
-        <p className="text-center" >StudentId</p>
+        <form className="w-fit" action="">
+          <p className="text-center">StudentId</p>
           <div className=" w-fit rounded-[30px]  px-6 border-2 border-[#E0E0E0]">
             <InputBox
               className="border-none bg-bgAccent text-center mt-4 px-12 py-0"

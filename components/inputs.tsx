@@ -1,7 +1,7 @@
 type InputProps = {
   name?: string;
   type?: string;
-  placeholder: string;
+  placeholder?: string;
   onChange: (e: any) => void;
   className?: string;
   readonly?: boolean;
