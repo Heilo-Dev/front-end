@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userInfo } from "os";
 import { APIEndpoints } from "../../data";
-import { UserInfo, Education,} from "../../types/user";
+import { UserInfo, Education, Result,} from "../../types/user";
 
 var token: string | null;
 const getUserToken = async () => {
@@ -26,7 +26,7 @@ export const userApi = createApi({
   }),
   tagTypes:['UserInfo','Education'],
   endpoints: (builder) => ({
-    getUserInfo: builder.query<UserInfo[],void>({
+    getUserInfo: builder.query<Result,void>({
       query: () => APIEndpoints.getUserInfo,
     }),
     updateEducation:builder.mutation<Education,void>({
