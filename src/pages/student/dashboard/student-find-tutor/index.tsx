@@ -2,7 +2,7 @@ import axios from "axios";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
-// @@ imports css @@ //
+// @@ internal component imports @@ //
 import Notification from "@components/student/dashboard/student-find-tutor/notifications";
 import SearchBar from "@components/student/dashboard/student-find-tutor/search-bar";
 import AvailableTutor from "@components/student/homepage/available-tutor";
