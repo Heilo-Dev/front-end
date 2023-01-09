@@ -2,7 +2,7 @@
 
 export interface Result {
   status: string;
-  result: Result;
+  result: UserInfo;
 }
 
 export interface UserInfo {

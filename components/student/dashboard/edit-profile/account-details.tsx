@@ -7,6 +7,7 @@ type Props = {};
 
 const AccountDetails = (props: Props) => {
   const { data } = useGetUserInfoQuery();
+  console.log(data);
   const handleChangePassword = (e: any) => {
     e.preventDefault();
     const newPass = e.target.newPass.value;
