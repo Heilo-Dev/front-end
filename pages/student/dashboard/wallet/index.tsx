@@ -24,7 +24,7 @@ const StudentWallet = (props: Props) => {
     if (data) setUserInfo(data.result);
   }, [data]);
 
-  console.log(userInfo);
+  console.log(data);
 
   return (
     <div>

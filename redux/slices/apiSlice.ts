@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userInfo } from "os";
 import { APIEndpoints } from "../../data";
-import { UserInfo, Education, Result,} from "../../types/user";
+import { UserInfo, Result,} from "../../types/user";
 
 var token: string | null;
 const getUserToken = async () => {
@@ -29,7 +29,7 @@ export const userApi = createApi({
     getUserInfo: builder.query<Result,void>({
       query: () => APIEndpoints.getUserInfo,
     }),
-    updateEducation:builder.mutation<Education,void>({
+    updateEducation:builder.mutation({
       query: (payload) => ({
         url: `${APIEndpoints.studentInfo}/update`,
         method: 'PATCH',
@@ -49,7 +49,7 @@ export const userApi = createApi({
         },
       }),
     }),
-    getWalletInfo:builder.query({
+    getWalletInfo:builder.query<Result,void>({
       query:()=>APIEndpoints.getWallet,
     })
   }),

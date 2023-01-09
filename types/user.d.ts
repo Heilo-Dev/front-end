@@ -2,7 +2,7 @@
 
 export interface Result {
   status: string;
-  result: UserInfo;
+  result: UserInfo | WaletInfo;
 }
 
 export interface UserInfo {
@@ -11,7 +11,7 @@ export interface UserInfo {
   email: string;
   phoneNumber: string;
   role: string;
-  currentInstitution:CurrentInstitution;
+  currentInstitution: CurrentInstitution;
   status: string;
   preferredMedium: any[];
   availability: any[];
@@ -24,4 +24,21 @@ export interface UserInfo {
 export interface CurrentInstitution {
   name: string;
   department: string;
+}
+
+export interface WaletInfo {
+  balance:number;
+  email:string;
+  role:string;
+  __v:number;
+  _id:string;
+  transaction:Transaction[]
+}
+
+export interface Transaction {
+  amount: number;
+  operator: string;
+  status: string;
+  trxId: string;
+  _id: string;
 }
