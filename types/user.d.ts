@@ -2,7 +2,12 @@
 
 export interface Result {
   status: string;
-  result: UserInfo | WaletInfo;
+  result: UserInfo;
+}
+
+export interface Result2{
+  status: string;
+  result: WaletInfo;
 }
 
 export interface UserInfo {

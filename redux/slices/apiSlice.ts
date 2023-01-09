@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userInfo } from "os";
 import { APIEndpoints } from "../../data";
-import { UserInfo, Result,} from "../../types/user";
+import { UserInfo, Result, Result2,} from "../../types/user";
 
 var token: string | null;
 const getUserToken = async () => {
@@ -49,7 +49,7 @@ export const userApi = createApi({
         },
       }),
     }),
-    getWalletInfo:builder.query<Result,void>({
+    getWalletInfo:builder.query<Result2,void>({
       query:()=>APIEndpoints.getWallet,
     })
   }),
