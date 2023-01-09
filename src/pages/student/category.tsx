@@ -1,10 +1,11 @@
-import { BtnSecondary, LocalImage, Navbar } from "../../components";
-import wave from "../../assets/img/category-wave.png";
 import Head from "next/head";
 
-type Props = {};
+// @@ imports css @@ //
+import { BtnSecondary, LocalImage, Navbar } from "@components";
+import wave from "@assets/img/category-wave.png";
 
-const Category = (props: Props) => {
+// @@======================= Category ========================@@ //
+const Category = () => {
   return (
     <>
       <Head>
@@ -13,20 +14,20 @@ const Category = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="flex justify-center h-screen relative">
-        <div className="categoryWave absolute top-0 flex flex-wrap justify-center items-start">
+      <div className="relative flex justify-center h-screen">
+        <div className="absolute top-0 flex flex-wrap items-start justify-center categoryWave">
           <LocalImage
             src={wave}
             alt="Hero Section Image"
             layout="fill"
             position="top"
           />
-          <div className="z-20 pt-36 w-1/2 flex flex-col items-center">
+          <div className="z-20 flex flex-col items-center w-1/2 pt-36">
             <div className="flex justify-between w-full">
               <BtnSecondary label="SSC" link="/register" />
               <BtnSecondary label="HSC" link="/register" />
             </div>
-            <div className="flex justify-between w-full my-16 px-10">
+            <div className="flex justify-between w-full px-10 my-16">
               <BtnSecondary label="A Level" link="/register" />
               <BtnSecondary label="O Level" link="/register" />
             </div>
