@@ -1,0 +1,36 @@
+import Image from "next/image";
+import React from "react";
+import tutor from "../../../assets/img/tutor.png";
+// import { UserInfo } from "../../../types/user";
+
+type Props = {
+  user?: any;
+};
+
+const AvailableTutor = ({ user }: Props) => {
+  return (
+    <div>
+      <div className="py-3 mb-4 px-8 bg-bgAccent h-[128px] rounded-lg">
+        <div className="flex items-center">
+          <Image sizes="50" width={60} src={tutor} alt="tutor avatar" />
+          <div className="lg:grid grid-cols-2 gap-x-12 mx-auto h-[100%]">
+            <p>{user?.name}</p>
+            <p>{user?.education?.currentInstitue?.name}</p>
+            <p>address</p>
+            <p>subject</p>
+          </div>
+          <div className="flex flex-col justify-around">
+            <button className="btnPrimary bg-white h-[40px] text-accent">
+              450/hr
+            </button>
+            <button className="btnPrimary h-[40px] mt-3 text-accent ">
+              message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AvailableTutor;

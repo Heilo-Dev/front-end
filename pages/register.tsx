@@ -10,6 +10,7 @@ import {
   LocalImage,
   SelectBox,
 } from "../components";
+import { APIEndpoints } from "../data";
 
 type Props = {};
 
@@ -48,8 +49,10 @@ const Register = (props: Props) => {
       phoneNumber: number,
     };
 
+    const url = process.env.apiUrl + APIEndpoints.registerAPI;
+
     axios
-      .post("https://heilo-services.onrender.com/api/v1/user/register", data)
+      .post(url, data)
       .then((data) => {
         if (data.data.status === "success") router.push("/login");
       })
