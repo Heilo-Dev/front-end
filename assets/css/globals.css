@@ -4,7 +4,7 @@
 
 @layer components {
   .btnPrimary {
-    @apply text-white bg-primaryLight capitalize px-11 py-2.5 rounded-xl font-semibold;
+    @apply text-white bg-primaryLight capitalize px-4 lg:px-11 py-2.5 rounded-xl font-medium lg:font-semibold;
   }
   .btnSecondary {
     @apply bg-white shadow-lg capitalize w-52 h-10 rounded-full font-semibold;

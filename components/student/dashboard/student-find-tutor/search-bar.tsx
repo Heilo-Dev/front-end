@@ -8,12 +8,11 @@ type Props = {
   getSubject: (e: any) => void;
 };
 
-const SearchBar = (props: Props) => {
-  const { getGender, getSubject, searchOn }: any = props;
+const SearchBar = ({ getGender, getSubject }: Props) => {
   return (
     <div className="my-8">
       <div className="w-fit mx-auto mb-4 ">
-        <div className="tabBorder w-fit rounded-l-full px-6 relative mr-20">
+        <div className="tabBorder w-fit rounded-l-full px-6 relative mr-[106px] lg:mr-20">
           <select defaultValue="subject" onChange={(e) => getSubject(e)} id="">
             <option value="English">English</option>
             <option value="Bangla">Bangla</option>
@@ -27,7 +26,7 @@ const SearchBar = (props: Props) => {
           </button>
         </div>
       </div>
-      <div className="flex justify-around items-center my-3">
+      <div className="flex flex-wrap mx-4 lg:justify-around items-center my-3">
         <div>
           <RoundedCheckBox value="male" onChange={(e) => getGender(e)} />
           <label htmlFor="">male</label>
@@ -36,15 +35,15 @@ const SearchBar = (props: Props) => {
           <RoundedCheckBox value="female" onChange={(e) => getGender(e)} />
           <label htmlFor="">female</label>
         </div>
-        <div className="tabBorder rounded-full px-3 py-0">
+        <div className="tabBorder order-4 lg:order-2 rounded-full px-3 py-0">
           <select name="" id="" className="focus:outline-none">
             <option value="">availability</option>
           </select>
         </div>
-        <div className="tabBorder px-1 rounded-lg">
+        <div className="tabBorder order-3 px-1 rounded-lg">
           <InputBox
             type="search"
-            placeholder="Search by ID"
+            placeholder="Search by name"
             className="m-0 focus:border-none border-1 border-xl border-none text-center"
             onChange={() => {}}
           />

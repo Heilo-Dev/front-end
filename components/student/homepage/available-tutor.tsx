@@ -12,8 +12,8 @@ const AvailableTutor = ({ user }: Props) => {
     <div>
       <div className="py-3 mb-4 px-8 bg-bgAccent h-[128px] rounded-lg">
         <div className="flex items-center">
-          <Image src={tutor} alt="tutor avatar" />
-          <div className="grid grid-cols-2 gap-x-12 mx-auto h-[100%]">
+          <Image sizes="50" width={60} src={tutor} alt="tutor avatar" />
+          <div className="lg:grid grid-cols-2 gap-x-12 mx-auto h-[100%]">
             <p>{user?.name}</p>
             <p>{user?.education?.currentInstitue?.name}</p>
             <p>address</p>

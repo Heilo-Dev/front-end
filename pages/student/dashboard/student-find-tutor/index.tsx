@@ -51,7 +51,7 @@ const StudentFindTutor = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <section className="grid grid-cols-12 gap-16">
+        <section className="lg:grid grid-cols-12 gap-16">
           <div className="col-span-8">
             <SearchBar getGender={getGender} getSubject={getSubject} />
             <div>
@@ -65,7 +65,7 @@ const StudentFindTutor = (props: Props) => {
               </Scrollbar>
             </div>
           </div>
-          <div className="col-span-4 mt-24 bg-bgAccent px-6 rounded-2xl h-fit">
+          <div className="col-span-4 hidden lg:block mt-24 bg-bgAccent px-6 rounded-2xl h-fit">
             <h1 className="text-primaryDark text-md capitalize mt-2">
               notifications
             </h1>
