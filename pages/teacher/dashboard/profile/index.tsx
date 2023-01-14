@@ -30,17 +30,17 @@ const Profile = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <section className="grid grid-cols-12 gap-6 mt-3">
+        <section className="lg:grid grid-cols-12 gap-6 mt-3">
           <div className="col-span-4">
             <StudentInfoCard userInfo={userInfo} />
           </div>
           <div className="col-span-8">
             <Scrollbar style={{ height: "calc(100vh - 130px)" }}>
-              <div className="grayDiv p-4 rounded-3xl">
+              <div className="grayDiv p-4 rounded-3xl mt-4 lg:mt-0">
                 <div className="titleTab bg-[#3DDEA5] text-white">
                   Basic Information
                 </div>
-                <div className="grid grid-cols-12 gap-4">
+                <div className="lg:grid grid-cols-12 gap-4">
                   <div className="col-span-6 p-4 pb-0">
                     <h1 className="font-light text[#7D7D7D] mb-1.5">Address</h1>
                     <p className="text-[#7D7D7D] font-semibold">
@@ -59,7 +59,7 @@ const Profile = (props: Props) => {
                 <div className="titleTab bg-[#3DDEA5] text-white">
                   Education
                 </div>
-                <div className="grid grid-cols-12 gap-4">
+                <div className="lg:grid grid-cols-12 gap-4">
                   <div className="col-span-6 p-4 pb-0">
                     <h1 className="font-light text[#7D7D7D] mb-1.5">
                       Current Institute
@@ -109,32 +109,32 @@ const Profile = (props: Props) => {
                 </div>
               </div>
 
-              <div className="border-4 border-[#F1F1F1] rounded-3xl mt-4 grid grid-cols-12">
-                <div className="col-span-6 p-4 pb-0 border border-r-4 border-[#F1F1F1]">
-                  <div className="titleTab bg-[#3DDEA5] text-white">
-                    Reviews
-                  </div>
-
-                  <div className="py-3 pl-10">
-                    <Scrollbar style={{ height: "calc(100vh - 400px)" }}>
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                      <ReviewTile />
-                    </Scrollbar>
-                  </div>
+              <div className="border-4 border-[#F1F1F1] rounded-3xl mt-4">
+                <div className="titleTab bg-[#3DDEA5] text-white m-4">
+                  Reviews
                 </div>
-
-                <div className="col-span-6 p-4 pb-0">
-                  <Review />
+                <div className="lg:grid grid-cols-12">
+                  <div className="col-span-6 order-3 p-4 pb-0">
+                    <Review />
+                  </div>
+                  <div className="col-span-6 order-2 p-4 pb-0 border border-r-4 border-[#F1F1F1]">
+                    <div className="py-3 pl-10">
+                      <Scrollbar style={{ height: "calc(100vh - 400px)" }}>
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                        <ReviewTile />
+                      </Scrollbar>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Scrollbar>
