@@ -32,7 +32,7 @@ const TeacherWallet = (props: Props) => {
       </Head>
 
       <DashboardLayout>
-        <section className="grid grid-cols-12 gap-6 mt-3">
+        <section className="lg:grid grid-cols-12 gap-6 mt-3">
           <div className="col-span-8">
             <div className="relative">
               <LocalImage src={WalletCard1} width={260} />
