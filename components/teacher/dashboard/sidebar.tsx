@@ -19,7 +19,7 @@ type Props = {};
 const TeacherSidebar = (props: Props) => {
   const router = useRouter();
   return (
-    <div className="h-full w-60 flex flex-col items-center justify-between">
+    <div className="h-full w-60 flex-col items-center justify-between hidden sm:flex">
       <div className="mt-4 mr-3 cursor-pointer">
         <LocalImage src={logo} width={100} />
       </div>
@@ -56,7 +56,7 @@ const TeacherSidebar = (props: Props) => {
         <button
           onClick={() => {
             signOut({ redirect: false });
-            localStorage.removeItem("heiloUserToken")
+            localStorage.removeItem("heiloUserToken");
             router.push("/");
           }}
           className="flex items-center mr-5"
