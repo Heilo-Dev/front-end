@@ -17,7 +17,7 @@ const Attachment = (props: Props) => {
       </div>
       <div className="my-6">
         <form className="w-fit mx-auto" action="">
-          <div className="grid grid-cols-2 gap-8 justify-center items-center mx-auto">
+          <div className="lg:grid space-y-2 lg:space-y-2 grid-cols-2 gap-8 justify-center items-center mx-auto">
             <div className="w-fit">
               <p className="text-center text-textSecondary">StudentId</p>
               <div className=" rounded-[30px]  px-6 border-2 border-[#E0E0E0]">

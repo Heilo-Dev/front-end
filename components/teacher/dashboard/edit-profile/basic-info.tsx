@@ -16,11 +16,11 @@ const BasicInfo = (props: Props) => {
       </div>
       <div className="my-6">
         <form action="">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="lg:grid grid-cols-3 gap-4">
             {/* name */}
 
             <div>
-              <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+              <div className=" lg:w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
                   Name
                 </label>
@@ -32,7 +32,7 @@ const BasicInfo = (props: Props) => {
                 />
               </div>
               <div className="flex mt-2 space-x-2">
-                <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+                <div className="w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                   <label className="text-[#7D7D7D]" htmlFor="">
                     Devision
                   </label>
@@ -43,7 +43,7 @@ const BasicInfo = (props: Props) => {
                     placeholder="sakib abdullah"
                   />
                 </div>
-                <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+                <div className="w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                   <label className="text-[#7D7D7D]" htmlFor="">
                     Villag,
                   </label>
@@ -59,10 +59,10 @@ const BasicInfo = (props: Props) => {
 
             {/* contact number */}
 
-            <div>
-              <div className=" w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="space-y-2 mt-2 lg:mt-0">
+              <div className="lg:w-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
-                  email
+                  gender
                 </label>
                 <br />
                 <InputBox
@@ -71,7 +71,7 @@ const BasicInfo = (props: Props) => {
                   placeholder="sakib.abdullah@gmail.com"
                 />
               </div>
-              <div className=" w-fit rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
+              <div className="lg:w-fit rounded-lg px-6 border-2 mt-2 border-[#E0E0E0]">
                 <label className="text-[#7D7D7D]" htmlFor="">
                   email
                 </label>
@@ -86,7 +86,7 @@ const BasicInfo = (props: Props) => {
 
             {/* contact number */}
 
-            <div className=" w-fit h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="lg:w-fit h-fit rounded-lg px-6 border-2 border-[#E0E0E0] mt-2 lg:mt-0">
               <label className="text-[#7D7D7D]" htmlFor="">
                 Contact Number
               </label>

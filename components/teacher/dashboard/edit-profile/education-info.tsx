@@ -16,10 +16,10 @@ const EducationInfo = (props: Props) => {
       </div>
       <div className="my-6">
         <form action="">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="lg:grid space-y-2 lg:space-y-0 grid-cols-2 gap-4">
             {/* current institute */}
 
-            <div className=" w-full rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="w-full rounded-lg px-6 border-2 border-[#E0E0E0]">
               <label className="text-[#7D7D7D]" htmlFor="">
                 Current institute
               </label>
@@ -31,7 +31,7 @@ const EducationInfo = (props: Props) => {
               />
             </div>
 
-            <div className=" w-full rounded-lg px-6 border-2  border-[#E0E0E0]">
+            <div className="w-full rounded-lg px-6 border-2  border-[#E0E0E0]">
               <label className="text-[#7D7D7D]" htmlFor="">
                 class
               </label>
@@ -49,7 +49,7 @@ const EducationInfo = (props: Props) => {
 
             {/* contact number */}
 
-            <div className=" w-full h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="w-full h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
               <label className="text-[#7D7D7D]" htmlFor="">
                 medium
               </label>
@@ -64,7 +64,7 @@ const EducationInfo = (props: Props) => {
                 <option value="audi">Audi</option>
               </select>
             </div>
-            <div className=" w-full h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
+            <div className="w-full h-fit rounded-lg px-6 border-2 border-[#E0E0E0]">
               <label className="text-[#7D7D7D]" htmlFor="">
                 Background
               </label>

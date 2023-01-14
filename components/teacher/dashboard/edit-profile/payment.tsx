@@ -15,7 +15,7 @@ const Payment = (props: Props) => {
       </div>
       <div className="my-6 mx-auto text-textSecondary">
         <form action="">
-          <div className="flex justify-around">
+          <div className="lg:flex justify-around">
             <div>
               <label>select method</label>
               <select defaultValue="bkash" name="" id="" className="bg-bgAccent border-[red] rounded-lg ml-2 px-16">
