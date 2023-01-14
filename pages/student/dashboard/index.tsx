@@ -58,8 +58,8 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <div className="px-4 mt-6">
-          <div className="flex justify-between">
+        <div className="sm:px-4 px-2 sm:mt-6 mt-2">
+          <div className="justify-between hidden sm:flex">
             <DashboardCard
               cardName="Upcoming Sessions"
               amount="03"
@@ -103,7 +103,7 @@ const Dashboard = ({ children }: Props) => {
             {selectedCard === 2 && <StudentTutionCompleted />}
             {selectedCard === 3 && <StudentQuizAppeared />}
             {selectedCard === 4 && <StudentFavouriteTutors />}
-            <div className="grayDiv mt-8 p-1 w-full px-5">
+            <div className="grayDiv mt-8 p-1 w-full px-5 hidden sm:block">
               <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
                 Notifications
               </h1>
