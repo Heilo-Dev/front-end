@@ -1,12 +1,13 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import EditProfile from "../../../../components/student/dashboard/edit-profile/edit-profile";
-import { DashboardLayout } from "../../../../layouts";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
 
-type Props = {};
+// @@ internal component imports @@ //;
+import EditProfile from "@components/student/dashboard/edit-profile/edit-profile";
+import { DashboardLayout } from "@layouts";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
 
-const Profile = (props: Props) => {
+// @@====================== Profile ===========================@@ //
+const Profile = () => {
   return (
     <div>
       <Head>
