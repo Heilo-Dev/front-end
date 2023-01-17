@@ -1,16 +1,16 @@
 import Head from "next/head";
-import { DashboardLayout } from "../../../layouts";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+
+// @@ internal imports @@ //
+import DashboardLayout from "@layouts/_dashboard";
 import {
   DashboardCard,
-  LocalImage,
-  Notification,
   NotificationTile,
   Scrollbar,
   TutionRequestTile,
-} from "../../../components";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+} from "@components";
 
 type Props = {
   children: React.ReactNode;
@@ -25,18 +25,18 @@ const Dashboard = ({ children }: Props) => {
 
   if (status === "loading" || status === "unauthenticated")
     return (
-      <div className="flex justify-center items-center section-container bg-slate-200">
-        <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-          <div className="animate-pulse flex space-x-4">
-            <div className="rounded-full bg-slate-700 h-10 w-10" />
-            <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 bg-slate-700 rounded" />
+      <div className="flex items-center justify-center section-container bg-slate-200">
+        <div className="w-full max-w-sm p-4 mx-auto border border-blue-300 rounded-md shadow">
+          <div className="flex space-x-4 animate-pulse">
+            <div className="w-10 h-10 rounded-full bg-slate-700" />
+            <div className="flex-1 py-1 space-y-6">
+              <div className="h-2 rounded bg-slate-700" />
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-2 bg-slate-700 rounded col-span-2" />
-                  <div className="h-2 bg-slate-700 rounded col-span-1" />
+                  <div className="h-2 col-span-2 rounded bg-slate-700" />
+                  <div className="h-2 col-span-1 rounded bg-slate-700" />
                 </div>
-                <div className="h-2 bg-slate-700 rounded" />
+                <div className="h-2 rounded bg-slate-700" />
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ const Dashboard = ({ children }: Props) => {
           </div>
 
           <div className="flex space-x-8">
-            <div className="grayDiv mt-8 p-1 w-full px-3">
+            <div className="w-full p-1 px-3 mt-8 grayDiv">
               <h1 className="text-[#C7495D] titleTab font-semibold my-2">
                 Tution requests
               </h1>
@@ -107,7 +107,7 @@ const Dashboard = ({ children }: Props) => {
                 </Scrollbar>
               </div>
             </div>
-            <div className="grayDiv mt-8 p-1 w-full px-5">
+            <div className="w-full p-1 px-5 mt-8 grayDiv">
               <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
                 Notifications
               </h1>
