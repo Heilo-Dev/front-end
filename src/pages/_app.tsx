@@ -7,14 +7,14 @@ import { Toaster } from "react-hot-toast";
 // @@---------------------@@//
 // @@ imports css @@ //
 // @@--------------------@@//
-import "../assets/css/globals.css";
-import "../assets/css/scrollbar.css";
+import "@assets/css/globals.css";
+import "@assets/css/scrollbar.css";
 
 // @@---------------------@@//
 // @@ internal imports @@ //
 // @@--------------------@@//
-import { store } from "@/src/redux/store";
-import { userApi } from "@/src/redux/slices/apiSlice";
+import { store } from "@redux/store";
+import { userApi } from "@redux/slices/apiSlice";
 
 export default function App({
   Component,
