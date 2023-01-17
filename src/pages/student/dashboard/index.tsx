@@ -1,6 +1,10 @@
 import Head from "next/head";
-import { DashboardLayout } from "../../../layouts";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
+// @@ imports css @@ //
+import { DashboardLayout } from "@layouts";
 import {
   DashboardCard,
   NotificationTile,
@@ -9,14 +13,12 @@ import {
   StudentTutionCompleted,
   StudentQuizAppeared,
   StudentFavouriteTutors,
-} from "../../../components";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+} from "@components";
 
 type Props = {
   children: React.ReactNode;
 };
-
+// @@====================== Dashboard =======================@@ //
 const Dashboard = ({ children }: Props) => {
   const { data: session, status } = useSession();
   const [selectedCard, setSelectedCard] = useState(1);
@@ -31,18 +33,18 @@ const Dashboard = ({ children }: Props) => {
 
   if (status === "loading" || status === "unauthenticated")
     return (
-      <div className="flex justify-center items-center section-container bg-slate-200">
-        <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
-          <div className="animate-pulse flex space-x-4">
-            <div className="rounded-full bg-slate-700 h-10 w-10" />
-            <div className="flex-1 space-y-6 py-1">
-              <div className="h-2 bg-slate-700 rounded" />
+      <div className="flex items-center justify-center section-container bg-slate-200">
+        <div className="w-full max-w-sm p-4 mx-auto border border-blue-300 rounded-md shadow">
+          <div className="flex space-x-4 animate-pulse">
+            <div className="w-10 h-10 rounded-full bg-slate-700" />
+            <div className="flex-1 py-1 space-y-6">
+              <div className="h-2 rounded bg-slate-700" />
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="h-2 bg-slate-700 rounded col-span-2" />
-                  <div className="h-2 bg-slate-700 rounded col-span-1" />
+                  <div className="h-2 col-span-2 rounded bg-slate-700" />
+                  <div className="h-2 col-span-1 rounded bg-slate-700" />
                 </div>
-                <div className="h-2 bg-slate-700 rounded" />
+                <div className="h-2 rounded bg-slate-700" />
               </div>
             </div>
           </div>
@@ -58,7 +60,7 @@ const Dashboard = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DashboardLayout>
-        <div className="sm:px-4 px-2 sm:mt-6 mt-2">
+        <div className="px-2 mt-2 sm:px-4 sm:mt-6">
           <div className="justify-between hidden sm:flex">
             <DashboardCard
               cardName="Upcoming Sessions"
@@ -103,7 +105,7 @@ const Dashboard = ({ children }: Props) => {
             {selectedCard === 2 && <StudentTutionCompleted />}
             {selectedCard === 3 && <StudentQuizAppeared />}
             {selectedCard === 4 && <StudentFavouriteTutors />}
-            <div className="grayDiv mt-8 p-1 w-full px-5 hidden sm:block">
+            <div className="hidden w-full p-1 px-5 mt-8 grayDiv sm:block">
               <h1 className="text-primaryLight font-semibold my-2 mx-1.5">
                 Notifications
               </h1>

@@ -1,18 +1,19 @@
 import axios from "axios";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import Notification from "../../../../components/student/dashboard/student-find-tutor/notifications";
-import SearchBar from "../../../../components/student/dashboard/student-find-tutor/search-bar";
-import AvailableTutor from "../../../../components/student/homepage/available-tutor";
-import Scrollbar from "../../../../components/ui/scrollbar";
-import { APIEndpoints } from "../../../../data";
-import { DashboardLayout } from "../../../../layouts";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
-import { UserInfo } from "../../../../types/user";
 
-type Props = {};
+// @@ imports css @@ //
+import Notification from "@components/student/dashboard/student-find-tutor/notifications";
+import SearchBar from "@components/student/dashboard/student-find-tutor/search-bar";
+import AvailableTutor from "@components/student/homepage/available-tutor";
+import Scrollbar from "@components/ui/scrollbar";
+import { APIEndpoints } from "@data";
+import { DashboardLayout } from "@layouts";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
+import { UserInfo } from "@@types/user";
 
-const StudentFindTutor = (props: Props) => {
+// @@=========================== imports css =========================@@ //
+const StudentFindTutor = () => {
   const [users, setUsers] = useState<UserInfo[]>([]);
   const [gender, setGender] = useState("");
   const [subject, setSubject] = useState("");
@@ -65,8 +66,8 @@ const StudentFindTutor = (props: Props) => {
               </Scrollbar>
             </div>
           </div>
-          <div className="col-span-4 mt-24 bg-bgAccent px-6 rounded-2xl h-fit">
-            <h1 className="text-primaryDark text-md capitalize mt-2">
+          <div className="col-span-4 px-6 mt-24 bg-bgAccent rounded-2xl h-fit">
+            <h1 className="mt-2 capitalize text-primaryDark text-md">
               notifications
             </h1>
             <Scrollbar style={{ height: "calc(80vh - 100px)" }}>

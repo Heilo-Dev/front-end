@@ -1,12 +1,13 @@
 import Head from "next/head";
 import React from "react";
-import AllMessages from "../../../../components/student/dashboard/inbox/all-messages";
-import Conversation from "../../../../components/student/dashboard/inbox/conversation";
-import { DashboardLayout } from "../../../../layouts";
 
-type Props = {};
+// @@ imports css @@ //
+import AllMessages from "@components/student/dashboard/inbox/all-messages";
+import Conversation from "@components/student/dashboard/inbox/conversation";
+import { DashboardLayout } from "@layouts";
 
-const Inbox = (props: Props) => {
+// @@====================== imports css =======================@@ //
+const Inbox = () => {
   return (
     <div>
       <Head>
@@ -18,10 +19,10 @@ const Inbox = (props: Props) => {
       <DashboardLayout>
         <section className="grid grid-cols-12 gap-6 mt-3">
           <div className="col-span-5">
-            <AllMessages/>
+            <AllMessages />
           </div>
           <div className="col-span-7">
-            <Conversation/>
+            <Conversation />
           </div>
         </section>
       </DashboardLayout>
