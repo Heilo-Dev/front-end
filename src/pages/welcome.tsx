@@ -1,7 +1,7 @@
 import Head from "next/head";
-import logo from "../assets/img/logo.png";
-import wave from "../assets/img/opening-wave1.png";
-import { BtnSecondary, LocalImage, Navbar } from "../components";
+import logo from "@assets/img/logo.png";
+import wave from "@assets/img/opening-wave1.png";
+import { BtnSecondary, LocalImage, Navbar } from "@components";
 
 type Props = {};
 
@@ -14,11 +14,11 @@ const OpeningInterface = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="flex justify-center h-screen relative">
-        <div className="openingLogo relative z-10">
+      <div className="relative flex justify-center h-screen">
+        <div className="relative z-10 openingLogo">
           <LocalImage src={logo} alt="Hero Section Image" layout="fill" />
         </div>
-        <div className="openingWave absolute bottom-0 flex justify-center items-center">
+        <div className="absolute bottom-0 flex items-center justify-center openingWave">
           <LocalImage
             src={wave}
             alt="Hero Section Image"
