@@ -4,15 +4,11 @@ import { SessionProvider } from "next-auth/react";
 import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 import { Toaster } from "react-hot-toast";
 
-// @@---------------------@@//
 // @@ imports css @@ //
-// @@--------------------@@//
 import "@assets/css/globals.css";
 import "@assets/css/scrollbar.css";
 
-// @@---------------------@@//
 // @@ internal imports @@ //
-// @@--------------------@@//
 import { store } from "@redux/store";
 import { userApi } from "@redux/slices/apiSlice";
 

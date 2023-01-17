@@ -1,13 +1,10 @@
-import React from "react";
-import { Footer, Navbar } from "../components";
-import BannerSection from "../components/aboutUs/banner-section";
-import HeroSection from "../components/aboutUs/hero-section";
-import Team from "../components/aboutUs/team";
-import { HomepageLayout } from "../layouts";
+// @@ internal imports @@ //
+import HeroSection from "@components/aboutUs/hero-section";
+import Team from "@components/aboutUs/team";
+import { BannerSection, Footer, Navbar } from "@components/index";
 
-type Props = {};
-
-const AboutUs = (props: Props) => {
+// @@ about us @@ //
+const AboutUs = () => {
   return (
     <>
       <Navbar />
@@ -16,7 +13,7 @@ const AboutUs = (props: Props) => {
         <BannerSection />
         <Team />
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
