@@ -1,7 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userInfo } from "os";
-import { APIEndpoints } from "../../data";
-import { UserInfo, Education, Result,} from "../../types/user";
+
+// @@---------------------@@//
+// @@ internal imports @@ //
+// @@--------------------@@//
+import { APIEndpoints } from "@data";
+import { UserInfo, Education, Result } from "@@types/user";
 
 var token: string | null;
 const getUserToken = async () => {
@@ -24,42 +28,42 @@ export const userApi = createApi({
       return headers;
     },
   }),
-  tagTypes:['UserInfo','Education'],
+  tagTypes: ["UserInfo", "Education"],
   endpoints: (builder) => ({
-    getUserInfo: builder.query<Result,void>({
+    getUserInfo: builder.query<Result, void>({
       query: () => APIEndpoints.getUserInfo,
     }),
-    updateEducation:builder.mutation<Education,void>({
+    updateEducation: builder.mutation<Education, void>({
       query: (payload) => ({
         url: `${APIEndpoints.studentInfo}/update`,
-        method: 'PATCH',
+        method: "PATCH",
         body: JSON.stringify(payload),
         headers: {
-          'Content-type': 'application/json;',
+          "Content-type": "application/json;",
         },
       }),
     }),
-    updateBasicInfo:builder.mutation({
-      query:(payload)=>({
+    updateBasicInfo: builder.mutation({
+      query: (payload) => ({
         url: `${APIEndpoints.studentInfo}/update`,
-        method: 'PATCH',
+        method: "PATCH",
         body: JSON.stringify(payload),
         headers: {
-          'Content-type': 'application/json;',
+          "Content-type": "application/json;",
         },
       }),
     }),
-    getWalletInfo:builder.query({
-      query:()=>APIEndpoints.getWallet,
-    })
+    getWalletInfo: builder.query({
+      query: () => APIEndpoints.getWallet,
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { 
+export const {
   useGetUserInfoQuery,
   useUpdateBasicInfoMutation,
   useUpdateEducationMutation,
-  useGetWalletInfoQuery
+  useGetWalletInfoQuery,
 } = userApi;

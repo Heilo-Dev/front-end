@@ -1,18 +1,14 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import {
-  Review,
-  ReviewTile,
-  Scrollbar,
-  StudentInfoCard,
-} from "../../../../components";
-import { DashboardLayout } from "../../../../layouts";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
-import { UserInfo } from "../../../../types/user";
 
-type Props = {};
+// @@ imports css @@ //
+import { Review, ReviewTile, Scrollbar, StudentInfoCard } from "@components";
+import { DashboardLayout } from "@layouts";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
+import { UserInfo } from "@@types/user";
 
-const Profile = (props: Props) => {
+// @@======================= Profile ====================@@ //
+const Profile = () => {
   const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
   const { data, error, isLoading, isFetching, isSuccess }: any =
     useGetUserInfoQuery();
@@ -36,7 +32,7 @@ const Profile = (props: Props) => {
           </div>
           <div className="col-span-8">
             <Scrollbar style={{ height: "calc(100vh - 130px)" }}>
-              <div className="grayDiv p-4 rounded-3xl">
+              <div className="p-4 grayDiv rounded-3xl">
                 <div className="titleTab bg-[#3DDEA5] text-white">
                   Basic Information
                 </div>
@@ -55,7 +51,7 @@ const Profile = (props: Props) => {
                 </div>
               </div>
 
-              <div className="grayDiv p-4 rounded-3xl mt-4">
+              <div className="p-4 mt-4 grayDiv rounded-3xl">
                 <div className="titleTab bg-[#3DDEA5] text-white">
                   Education
                 </div>
@@ -92,7 +88,7 @@ const Profile = (props: Props) => {
                 </div>
               </div>
 
-              <div className="grayDiv p-4 rounded-3xl mt-4">
+              <div className="p-4 mt-4 grayDiv rounded-3xl">
                 <div className="titleTab bg-[#3DDEA5] text-white">
                   Achivements
                 </div>
