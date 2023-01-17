@@ -1,11 +1,12 @@
 import Head from "next/head";
 import React from "react";
-import EditProfile from "../../../../components/teacher/dashboard/edit-profile/edit-profile";
-import { DashboardLayout } from "../../../../layouts";
 
-type Props = {};
+// @@ imports css @@ //
+import EditProfile from "@components/teacher/dashboard/edit-profile/edit-profile";
+import { DashboardLayout } from "@layouts";
 
-const Profile = (props: Props) => {
+// @@============================ Profile ============================@@ //
+const Profile = () => {
   return (
     <div>
       <Head>

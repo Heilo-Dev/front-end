@@ -1,18 +1,19 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+
+// @@ imports css @@ //
 import {
   LocalImage,
   TransactionHistoryTable,
   TeacherBalanceCard,
-} from "../../../../components";
-import { DashboardLayout } from "../../../../layouts";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
-import { UserInfo } from "../../../../types/user";
-import WalletCard1 from "../../../../assets/img/wallet-card1.png";
+} from "@components";
+import { DashboardLayout } from "@layouts";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
+import { UserInfo } from "@@types/user";
+import WalletCard1 from "@assets/img/wallet-card1.png";
 
-type Props = {};
-
-const TeacherWallet = (props: Props) => {
+// @@================= TeacherWallet =====================@@ //
+const TeacherWallet = () => {
   const [userInfo, setUserInfo] = useState<UserInfo | undefined>(undefined);
   const { data, error, isLoading, isFetching, isSuccess }: any =
     useGetUserInfoQuery();
@@ -36,7 +37,7 @@ const TeacherWallet = (props: Props) => {
           <div className="col-span-8">
             <div className="relative">
               <LocalImage src={WalletCard1} width={260} />
-              <h1 className="absolute top-1/2 left-9 -translate-y-1/2 text-white flex flex-col leading-none font-bold text-3xl">
+              <h1 className="absolute flex flex-col text-3xl font-bold leading-none text-white -translate-y-1/2 top-1/2 left-9">
                 1250<span>US</span>
               </h1>
             </div>

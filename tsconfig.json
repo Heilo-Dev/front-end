@@ -29,8 +29,8 @@
       "@redux/*": ["src/redux/*"],
       "@public/*": ["public/*"],
       "@redux": ["src/redux"],
-      "@types/*": ["src/types/*"],
-      "@types": ["src/types"]
+      "@@types/*": ["src/types/*"],
+      "@@types": ["src/types"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
