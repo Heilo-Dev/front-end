@@ -1,7 +1,9 @@
 import React from "react";
-import QuizAppeared1 from "../../../assets/img/quiz-appeared1.png";
-import QuizAppeared2 from "../../../assets/img/quiz-appeared2.png";
-import { LocalImage } from "../../image-snippents";
+
+// @@ internal imports @@ //
+import { LocalImage } from "@components/image-snippents";
+import QuizAppeared1 from "@assets/img/quiz-appeared1.png";
+import QuizAppeared2 from "@assets/img/quiz-appeared2.png";
 
 type Props = {};
 

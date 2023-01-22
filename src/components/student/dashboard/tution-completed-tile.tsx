@@ -1,6 +1,8 @@
 import React from "react";
-import profilePic from "../../../assets/img/tutor.png";
-import { LocalImage } from "../../image-snippents";
+
+// @@ internal imports @@ //
+import profilePic from "@assets/img/tutor.png";
+import { LocalImage } from "@components/image-snippents";
 
 type Props = {};
 

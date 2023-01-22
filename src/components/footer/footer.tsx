@@ -1,14 +1,15 @@
-import mapIcon from "../../assets/img/map-icon.png";
-import emailIcon from "../../assets/img/email-icon.png";
-import logo from "../../assets/img/logo.png";
-import { LocalImage } from "../image-snippents";
+// @@ internal imports @@ //
+import mapIcon from "@assets/img/map-icon.png";
+import emailIcon from "@assets/img/email-icon.png";
+import logo from "@assets/img/logo.png";
 import {
-  Instagram,
-  Twitter,
   Facebook,
+  Instagram,
   LinkedIn,
+  LocalImage,
+  Twitter,
   Youtube,
-} from "../../components";
+} from "..";
 
 type Props = {};
 

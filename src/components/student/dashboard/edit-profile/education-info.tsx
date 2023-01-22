@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { APIEndpoints } from "../../../../data";
-import {
-  useGetUserInfoQuery,
-  useUpdateEducationMutation,
-} from "../../../../redux/slices/apiSlice";
-import { InputBox } from "../../../inputs";
+import React from "react";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
+import { APIEndpoints } from "@data/index";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
 
 type Props = {};
 

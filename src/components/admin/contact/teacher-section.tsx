@@ -1,7 +1,8 @@
 import React from "react";
+
+// @@ internal imports @@ //
 import Details from "./details";
 import TeacherMessages from "./teacher-messages";
-import Messages from "./teacher-messages";
 
 type Props = {};
 

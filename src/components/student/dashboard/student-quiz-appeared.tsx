@@ -1,7 +1,8 @@
 import React from "react";
-import Scrollbar from "../../ui/scrollbar";
+
+// @@ internal imports @@ //
+import Scrollbar from "@components/ui/scrollbar";
 import QuizAppearedTile from "./quiz-appeared-tile";
-import SessionTile from "./session-tile";
 
 type Props = {};
 

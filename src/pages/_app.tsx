@@ -11,7 +11,7 @@ import "@assets/css/globals.css";
 import "@assets/css/scrollbar.css";
 
 // @@---------------------@@//
-// @@ internal imports @@ //
+ // @@ internal imports @@ //
 // @@--------------------@@//
 import { store } from "@redux/store";
 import { userApi } from "@redux/slices/apiSlice";

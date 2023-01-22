@@ -1,7 +1,9 @@
 import React from "react";
-import { APIEndpoints } from "../../../../data";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
-import { InputBox } from "../../../inputs";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
+import { APIEndpoints } from "@data/index";
 
 type Props = {};
 

@@ -1,18 +1,16 @@
 import { useRouter } from "next/router";
-import logo from "../../../assets/img/logo-white.png";
 import { signOut } from "next-auth/react";
-import {
-  GraduationCap,
-  DashboardMenuItem,
-  ClipBoardListCheck,
-  Laptop,
-  ProfileIcon,
-  EditProfileIcon,
-  EmailIcon,
-  LogoutIcon,
-  WalletIcon,
-} from "../../../components";
-import { LocalImage } from "../../image-snippents";
+
+// @@ internal imports @@ //
+import logo from "@assets/img/logo-white.png";
+import { LocalImage } from "@components/image-snippents";
+import DashboardMenuItem from "@components/student/dashboard/dashboard-menu-item";
+import { Laptop } from "@components/icons/student-dashboard/laptop";
+import { ProfileIcon } from "@components/icons/profile-icon";
+import { EditProfileIcon } from "@components/icons/edit-profile-icon";
+import { WalletIcon } from "@components/icons/teacher-dashboard/laptop";
+import { EmailIcon } from "@components/icons/email-icon";
+import { LogoutIcon } from "@components/icons/logout-icon";
 
 type Props = {};
 

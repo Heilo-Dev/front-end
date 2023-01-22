@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import Underline from "../underline";
-import tusher from "../../assets/img/Ellipse 18.png";
-import { Facebook } from "../icons/socials/facebook";
-import { Instagram } from "../icons/socials/instagram";
-import { LinkedIn } from "../icons/socials/linkedin";
+
+// @@ internal imports @@ //
+import tusher from "@assets/img/Ellipse 18.png";
+import { Facebook, Instagram, LinkedIn } from "..";
+import Underline from "@components/underline";
 
 type Props = {};
 

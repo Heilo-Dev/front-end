@@ -1,5 +1,7 @@
 import React from "react";
-import Scrollbar from "../../ui/scrollbar";
+
+// @@ internal imports @@ //
+import Scrollbar from "@components/ui/scrollbar";
 import PaymentCard from "./payment-card";
 
 type Props = {};
@@ -7,8 +9,13 @@ type Props = {};
 const PaymentRequest = (props: Props) => {
   return (
     <div>
-      <h1 className="text-primaryDark text-lg font-medium mb-2 pl-4">Payment Request</h1>
-      <Scrollbar className="w-fit px-4" style={{ height: "calc(45vh - 120px)" }}>
+      <h1 className="text-primaryDark text-lg font-medium mb-2 pl-4">
+        Payment Request
+      </h1>
+      <Scrollbar
+        className="w-fit px-4"
+        style={{ height: "calc(45vh - 120px)" }}
+      >
         <PaymentCard />
         <PaymentCard />
         <PaymentCard />

@@ -1,7 +1,8 @@
+import { SearchIcon } from "@components/icons/admin-teacher/search-icon";
+import Scrollbar from "@components/ui/scrollbar";
 import React from "react";
-import { SearchIcon } from "../../../icons/admin-teacher/search-icon";
-import Scrollbar from "../../../ui/scrollbar";
 import Detail from "./detail";
+
 type Props = {};
 
 const AllMessages = (props: Props) => {

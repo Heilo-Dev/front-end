@@ -1,7 +1,9 @@
 import React from "react";
-import { BtnSecondary } from "../../../buttons";
-import { LocalImage } from "../../../image-snippents";
-import WalletCard2 from "../../../../assets/img/wallet-card2.png";
+
+// @@ internal imports @@ //
+import WalletCard2 from "@assets/img/wallet-card2.png";
+import { LocalImage } from "@components/image-snippents";
+import { BtnSecondary } from "@components/buttons";
 
 type Props = {};
 

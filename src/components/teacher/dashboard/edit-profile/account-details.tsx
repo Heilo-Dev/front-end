@@ -1,5 +1,7 @@
 import React from "react";
-import { InputBox } from "../../../inputs";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
 
 type Props = {};
 
@@ -7,13 +9,12 @@ const AccountDetails = (props: Props) => {
   return (
     <section className="bg-bgAccent rounded-[30px] p-4 mb-8">
       <div className="flex justify-between">
-        
-          <p className="bg-primaryLight text-[#FFFFFF] px-2 lg:px-6 py-1 rounded-full ">
-            Account Details
-          </p>
-        
+        <p className="bg-primaryLight text-[#FFFFFF] px-2 lg:px-6 py-1 rounded-full ">
+          Account Details
+        </p>
+
         <button className="btnPrimary bg-[#C4C4C4] text-primaryDark px-6 py-1 rounded-full font-normal">
-        change password
+          change password
         </button>
       </div>
       <div className="my-6">

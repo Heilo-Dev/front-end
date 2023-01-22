@@ -1,5 +1,6 @@
-import { LocalImage } from "../../components";
-import heroImage from "../../assets/img/heroImage.png";
+// @@ internal imports @@ //
+import { LocalImage } from "..";
+import heroImage from "@assets/img/heroImage.png";
 
 type Props = {};
 

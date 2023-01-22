@@ -1,7 +1,9 @@
-import axios from "axios";
 import React from "react";
-import { APIEndpoints } from "../../../../data";
-import { InputBox } from "../../../inputs";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
+import { APIEndpoints } from "@data/index";
+
 type Props = {
   basic: any;
 };

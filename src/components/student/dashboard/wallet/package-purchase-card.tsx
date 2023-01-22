@@ -1,8 +1,9 @@
 import React from "react";
-import { BtnSecondary } from "../../../buttons";
-import { LocalImage } from "../../../image-snippents";
+
+// @@ internal imports @@ //
+import { LocalImage } from "@components/image-snippents";
+import { APIEndpoints } from "@data/index";
 import WalletCard2 from "../../../../assets/img/wallet-card2.png";
-import { APIEndpoints } from "../../../../data";
 
 type Props = {};
 

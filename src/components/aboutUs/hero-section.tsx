@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import creative from '../../assets/img/Creative team-rafiki 1.png'
+import creative from '@assets/img/Creative team-rafiki 1.png'
 type Props = {};
 
 const HeroSection = (props: Props) => {

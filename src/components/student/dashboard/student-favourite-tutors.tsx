@@ -1,8 +1,9 @@
 import React from "react";
-import { LocalImage } from "../../image-snippents";
-import Scrollbar from "../../ui/scrollbar";
-import SessionTile from "./session-tile";
-import StarBanner from "../../../assets/img/star-banner.png";
+
+// @@ internal imports @@ //
+import StarBanner from "@assets/img/star-banner.png";
+import { LocalImage } from "@components/image-snippents";
+import Scrollbar from "@components/ui/scrollbar";
 import FavouriteTutorTile from "./favourite-tutor-tile";
 
 type Props = {};

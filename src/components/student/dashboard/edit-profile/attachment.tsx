@@ -1,5 +1,7 @@
 import React from "react";
-import { InputBox } from "../../../inputs";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
 
 type Props = {};
 

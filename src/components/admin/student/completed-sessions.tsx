@@ -1,5 +1,7 @@
 import React from "react";
-import Scrollbar from "../../ui/scrollbar";
+
+// @@ internal imports @@ //
+import Scrollbar from "@components/ui/scrollbar";
 import Session from "./session";
 
 type Props = {};

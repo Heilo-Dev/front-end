@@ -1,5 +1,4 @@
 import React from "react";
-import Scrollbar from "../../ui/scrollbar";
 
 type Props = {};
 

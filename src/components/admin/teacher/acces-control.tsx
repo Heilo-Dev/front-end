@@ -1,6 +1,8 @@
 import React from "react";
-import { SearchIcon } from "../../icons/admin-teacher/search-icon";
-import Scrollbar from "../../ui/scrollbar";
+
+// @@ internal imports @@ //
+import { SearchIcon } from "@components/icons/admin-teacher/search-icon";
+import Scrollbar from "@components/ui/scrollbar";
 import ActionCard from "./action-card";
 
 type Props = {};

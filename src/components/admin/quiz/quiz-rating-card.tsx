@@ -1,7 +1,9 @@
 import React from "react";
-import { LocalImage } from "../../image-snippents";
-import profilePic from "../../../assets/img/tutor.png";
-import { StarIcon } from "../../icons/student-dashboard/star-icon";
+
+// @@ internal imports @@ //
+import profilePic from "@assets/img/tutor.png";
+import { LocalImage } from "@components/image-snippents";
+import { StarIcon } from "@components/icons/student-dashboard/star-icon";
 
 type Props = {};
 

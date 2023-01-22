@@ -1,7 +1,9 @@
 import React from "react";
-import { LocalImage } from "../../image-snippents";
-import Scrollbar from "../../ui/scrollbar";
-import Trophy from "../../../assets/img/trophy.png";
+
+// @@ internal imports @@ //
+import Trophy from "@assets/img/trophy.png";
+import { LocalImage } from "@components/image-snippents";
+import Scrollbar from "@components/ui/scrollbar";
 import TutionCompletedTile from "./tution-completed-tile";
 
 type Props = {};

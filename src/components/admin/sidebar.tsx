@@ -1,18 +1,17 @@
+// @@ internal imports @@ //
 import { useRouter } from "next/router";
-import logo from "../../assets/img/logo-white.png";
 import { signOut } from "next-auth/react";
+import logo from "@assets/img/logo-white.png";
+
 import {
-  GraduationCap,
-  DashboardMenuItem,
-  ClipBoardListCheck,
-  Laptop,
-  ProfileIcon,
   EditProfileIcon,
   EmailIcon,
+  Laptop,
+  LocalImage,
   LogoutIcon,
+  ProfileIcon,
   WalletIcon,
-} from "../../components";
-import { LocalImage } from "..//image-snippents";
+} from "..";
 import AdminMenuItem from "./admin-mentu-item";
 
 type Props = {};

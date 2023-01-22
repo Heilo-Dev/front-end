@@ -1,5 +1,7 @@
 import React from "react";
-import { Scrollbar, SessionItem, SearchIcon } from "../../components";
+
+// @@ internal imports @@ //
+import { Scrollbar, SessionItem, SearchIcon } from "..";
 
 type Props = {};
 

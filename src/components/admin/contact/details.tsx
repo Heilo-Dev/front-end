@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import max from "../../../assets/img/Maximilien-Robespierre 6.png";
+
+// @@ internal imports @@ //
+import max from "@assets/img/Maximilien-Robespierre 6.png";
 
 type Props = {};
 

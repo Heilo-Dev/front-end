@@ -1,7 +1,7 @@
+// @@ internal imports @@ //
 import { LocalImage, BtnPrimary, Navlink } from "..";
-import logo from "../../assets/img/logo.png";
+import logo from "@assets/img/logo.png";
 import { useSession, signOut } from "next-auth/react";
-import { useEffect } from "react";
 
 type Props = {};
 

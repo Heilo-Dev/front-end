@@ -1,5 +1,7 @@
 import React from "react";
-import { InputBox } from "../../../inputs";
+
+// @@ internal imports @@ //
+import { InputBox } from "@components/inputs";
 
 type Props = {};
 
@@ -37,9 +39,10 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="cars"
+              >
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>
@@ -55,9 +58,10 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="cars"
+              >
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>
@@ -70,9 +74,10 @@ const EducationInfo = (props: Props) => {
               </label>
               <br />
               <select
-              className="w-full border-none bg-bgAccent p-0 text-primaryDark"
-               id="cars"
-               name="cars">
+                className="w-full border-none bg-bgAccent p-0 text-primaryDark"
+                id="cars"
+                name="cars"
+              >
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>

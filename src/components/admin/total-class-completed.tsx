@@ -1,5 +1,7 @@
 import React from "react";
-import { Scrollbar } from "../../components";
+
+// @@ internal imports @@ //
+import { Scrollbar } from "..";
 
 type Props = {};
 

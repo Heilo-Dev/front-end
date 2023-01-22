@@ -1,6 +1,8 @@
 import React from "react";
-import ReviewerPic from "../../../../assets/img/tutor.png";
-import { LocalImage } from "../../../image-snippents";
+
+// @@ internal imports @@ //
+import ReviewerPic from "@assets/img/tutor.png";
+import { LocalImage } from "@components/image-snippents";
 
 type Props = {};
 

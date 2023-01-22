@@ -1,7 +1,10 @@
 import React from "react";
-import profilePic from "../../../assets/img/tutor.png";
-import { CircleCheckIcon, CircleCrossIcon } from "../../../components";
-import { LocalImage } from "../../image-snippents";
+
+// @@ internal imports @@ //
+import profilePic from "@assets/img/tutor.png";
+import { LocalImage } from "@components/image-snippents";
+import { CircleCrossIcon } from "@components/icons/teacher-dashboard/circle-cross-icon";
+import { CircleCheckIcon } from "@components/icons/teacher-dashboard/circle-check-icon";
 
 type Props = {};
 

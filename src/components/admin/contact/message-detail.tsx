@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import dp from "../../../assets/img/student-pro.png";
+import dp from "@assets/img/student-pro.png";
 
 type Props = {};
 

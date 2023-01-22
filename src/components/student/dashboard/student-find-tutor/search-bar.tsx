@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React, { useState } from "react";
-import Slider from "rc-slider";
-import { InputBox, RoundedCheckBox } from "../../../inputs";
+
+// @@ internal imports @@ //
+import { InputBox, RoundedCheckBox } from "@components/inputs";
 
 type Props = {
   getGender: (e: any) => void;

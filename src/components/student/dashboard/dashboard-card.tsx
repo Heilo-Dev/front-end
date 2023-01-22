@@ -1,6 +1,7 @@
+import { DashboardCardShapeLarge } from "@components/icons/student-dashboard/dashboard-card-shape-large";
+import { DashboardCardShapeSmall } from "@components/icons/student-dashboard/dashboard-card-shape-small";
 import React from "react";
-import { DashboardCardShapeLarge } from "../../icons/student-dashboard/dashboard-card-shape-large";
-import { DashboardCardShapeSmall } from "../../icons/student-dashboard/dashboard-card-shape-small";
+
 
 type Props = {
   color1: string;

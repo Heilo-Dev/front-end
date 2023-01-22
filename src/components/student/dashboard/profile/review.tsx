@@ -1,6 +1,9 @@
 import React from "react";
-import { StarIcon, LocalImage } from "../../../../components";
-import ReviewerImage from "../../../../assets/img/tutor.png";
+
+// @@ internal imports @@ //
+import { StarIcon } from "@components/icons/student-dashboard/star-icon";
+import { LocalImage } from "@components/image-snippents";
+import ReviewerImage from "@assets/img/tutor.png";
 
 type Props = {};
 
@@ -17,7 +20,9 @@ const Review = (props: Props) => {
           <StarIcon className="text-[#FEDB41] w-5 h-5" />
           <StarIcon className="text-[#FEDB41] w-5 h-5" />
           <StarIcon className="text-textSecondary w-5 h-5" />
-          <p className="font-bold text-textSecondary ml-1.5 text-2xl mt-1.5">/ 4</p>
+          <p className="font-bold text-textSecondary ml-1.5 text-2xl mt-1.5">
+            / 4
+          </p>
         </span>
         <p className="text-textSecondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor

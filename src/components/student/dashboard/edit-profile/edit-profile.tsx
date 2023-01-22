@@ -1,10 +1,10 @@
-import axios from "axios";
 import React from "react";
-import { APIEndpoints } from "../../../../data";
-import { Scrollbar } from "../../../../components";
-import OtherInfo from "./other-info";
+import { useGetUserInfoQuery } from "@redux/slices/apiSlice";
+
+// @@ internal imports @@ //
+import Scrollbar from "@components/ui/scrollbar";
 import StudentInfoCard from "../student-info-card";
-import { useGetUserInfoQuery } from "../../../../redux/slices/apiSlice";
+import OtherInfo from "./other-info";
 
 type Props = {};
 

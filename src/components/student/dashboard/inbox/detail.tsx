@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import dp from "../../../../assets/img/student-pro.png";
+
+// @@ internal imports @@ //
+import dp from "@assets/img/student-pro.png";
 type Props = {};
 
 const Detail = (props: Props) => {

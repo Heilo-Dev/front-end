@@ -1,5 +1,7 @@
 import React from "react";
-import { StarIcon } from "../../icons/student-dashboard/star-icon";
+
+// @@ internal imports @@ //
+import { StarIcon } from "@components/icons/student-dashboard/star-icon";
 
 type Props = {
   rating: number;

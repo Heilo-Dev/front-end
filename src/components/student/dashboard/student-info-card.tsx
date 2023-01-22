@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import student from "../../../assets/img/student.png";
+
+// @@ internal imports @@ //
+import student from "@assets/img/student.png";
 import { UserInfo } from "../../../types/user";
-import { StarIcon } from "../../icons/student-dashboard/star-icon";
+import { StarIcon } from "@components/icons/student-dashboard/star-icon";
 
 type Props = {
   userInfo?: UserInfo | undefined;

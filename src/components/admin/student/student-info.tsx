@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import women from "../../../assets/img/women.png";
+import women from "@assets/img/women.png";
 type Props = {};
 
 const StudentInfo = (props: Props) => {

@@ -1,9 +1,9 @@
-import axios from "axios";
 import React from "react";
-import { APIEndpoints } from "../../../../data";
-import { Scrollbar } from "../../../../components";
+
+// @@ internal imports @@ //
+import StudentInfoCard from "@components/student/dashboard/student-info-card";
+import Scrollbar from "@components/ui/scrollbar";
 import OtherInfo from "./other-info";
-import StudentInfoCard from "../../../student/dashboard/student-info-card";
 
 type Props = {};
 
