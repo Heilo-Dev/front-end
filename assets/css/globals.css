@@ -9,6 +9,9 @@
   .btnSecondary {
     @apply bg-white shadow-lg capitalize w-52 h-10 rounded-full font-semibold;
   }
+  .btnAccent {
+    @apply bg-accent text-white shadow-lg capitalize w-32 h-10;
+  }
   .section-container {
     @apply min-h-screen max-w-[1172px] mx-auto container;
   }
@@ -20,6 +23,15 @@
   }
   .form-input {
     @apply py-1.5 px-0 mb-4 w-full border-gray-400 focus:border-primaryLight placeholder:text-sm focus:placeholder:text-gray-800 focus:text-gray-800 text-gray-500 outline-none focus:ring-transparent border-0 border-b-[1px];
+  }
+  .grayDiv {
+    @apply bg-[#f1f1f1] px-8 rounded-2xl;
+  }
+  .titleTab {
+    @apply px-5 py-0.5 rounded-full w-fit;
+  }
+  .tabBorder {
+    @apply border-2 border-textSecondary/70;
   }
 }
 
@@ -71,4 +83,71 @@ body {
 .phase2-wave {
   width: 100%;
   height: 107%;
+}
+
+/**=====================================================**/
+/** Styles for Student Registration Images **/
+/**=====================================================**/
+
+.dashboard-menu-item-active {
+  position: relative;
+  z-index: 1;
+}
+.dashboard-menu-item-active::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  transform: rotate(180deg);
+  top: -20px;
+  right: 0;
+  z-index: -1;
+}
+.dashboard-menu-item-active::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  transform: rotate(180deg);
+  bottom: -20px;
+  right: 0;
+  z-index: -1;
+}
+
+select {
+  appearance: none;
+  border: none;
+}
+
+table {
+  border-collapse: separate;
+}
+
+thead {
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+tbody {
+  padding-top: 30px;
+}
+
+th {
+  border-right: 2px solid #b9b9b9;
+}
+
+td {
+  border-bottom: 4px solid white;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.custom-td {
+  border-right: 2px solid #01b489;
+  border-bottom: none;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
