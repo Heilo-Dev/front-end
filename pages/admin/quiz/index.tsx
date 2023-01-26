@@ -63,7 +63,7 @@ const AdminQuiz = (props: Props) => {
             </div>
 
             <div className="col-span-4 mb-64 lg:mb-0 p-3 lg:p-0">
-              <div className="grayDiv lg:h-screen">
+              <div className="grayDiv lg:h-screen md:mb-64 lg:mb-0">
                 <AverageRating rating={4.8} />
                 <div className="flex justify-between my-3">
                   <div className="w-fit flex bg-white overflow-hidden font-semibold rounded-full border-primaryDark border-[1px] pl-2">
