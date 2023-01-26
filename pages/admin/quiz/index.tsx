@@ -21,11 +21,11 @@ const AdminQuiz = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminLayout>
-        <div className="pl-6">
-          <div className="grid grid-cols-12 gap-4">
+        <div className="lg:pl-6">
+          <div className="lg:grid grid-cols-12 gap-4">
             {/* <div className="flex flex-col pt-5"> */}
             <div className="col-span-8 p-4 pb-0 mt-4">
-              <div className="grid grid-cols-12 gap-4">
+              <div className="lg:grid grid-cols-12 space-y-3 gap-4">
                 <div className="col-span-4">
                   <AdminQuizDashboardCard
                     title="TOTAL QUIZ CONDUCTED"
@@ -62,8 +62,8 @@ const AdminQuiz = (props: Props) => {
               <TotalQuizScale />
             </div>
 
-            <div className="col-span-4">
-              <div className="grayDiv h-screen">
+            <div className="col-span-4 mb-64 lg:mb-0 p-3 lg:p-0">
+              <div className="grayDiv lg:h-screen">
                 <AverageRating rating={4.8} />
                 <div className="flex justify-between my-3">
                   <div className="w-fit flex bg-white overflow-hidden font-semibold rounded-full border-primaryDark border-[1px] pl-2">

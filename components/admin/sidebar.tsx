@@ -14,6 +14,8 @@ import {
 } from "../../components";
 import { LocalImage } from "..//image-snippents";
 import AdminMenuItem from "./admin-mentu-item";
+import { AdminHomeIcon } from "../icons/admin-sideber/home-icon";
+import { AdminContactIcon } from "../icons/admin-sideber/contact-icon";
 
 type Props = {};
 
@@ -26,22 +28,25 @@ const AdminSidebar = (props: Props) => {
       </div>
 
       <ul className="w-full h-96">
-        <AdminMenuItem icon={<Laptop width={28} />} path="/admin/teacher" />
         <AdminMenuItem
-          icon={<ProfileIcon width={22} />}
-          path="/teacher/dashboard/profile"
+          icon={<AdminHomeIcon width={28} />}
+          path="/admin"
         />
         <AdminMenuItem
           icon={<EditProfileIcon width={30} />}
-          path="/teacher/dashboard/edit-profile"
+          path="/admin/quiz"
         />
         <AdminMenuItem
           icon={<WalletIcon width={26} />}
-          path="/teacher/dashboard/wallet"
+          path="/admin/teacher"
         />
         <AdminMenuItem
           icon={<EmailIcon width={26} />}
-          path="/teacher/dashboard/inbox"
+          path="/admin/student"
+        />
+        <AdminMenuItem
+          icon={<AdminContactIcon width={26} />}
+          path="/admin/contact"
         />
       </ul>
 
