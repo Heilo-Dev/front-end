@@ -17,15 +17,15 @@ const TeacherAdmin = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminLayout>
-        <div className="grid grid-cols-12 gap-3">
+        <div className="lg:grid grid-cols-12 gap-3 mb-64 md:mb-[450px] lg:mb-0">
           <div className="col-span-8 py-7">
             <PaymentRequest />
-            <div className="flex justify-center px-4 mt-20 space-x-3">
+            <div className="lg:flex justify-center px-4 mt-20 lg:space-x-3">
               <Paid />
               <Due />
             </div>
           </div>
-          <div className="col-span-4 bg-[#EBEBEB] rounded-l-2xl h-screen px-2">
+          <div className="col-span-4 bg-[#EBEBEB] rounded-2xl lg:rounded-l-2xl h-screen mx-4 lg:mx-0 lg:px-2 py-2 lg:py-0">
             <AccessControl />
           </div>
         </div>

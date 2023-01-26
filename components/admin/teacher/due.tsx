@@ -4,8 +4,8 @@ type Props = {};
 
 const Due = (props: Props) => {
   return (
-    <div className="border-[#01B489] border-2 rounded-2xl flex-1 p-4 relative">
-      <div className="bg-primaryDark py-2 pl-6 pr-1 rounded-xl text-white absolute top-[-45px] translate-x-[90px]">
+    <div className="border-[#01B489] border-2 rounded-2xl flex-1 p-4 mt-16 md:mt-16 lg:mt-0 relative">
+      <div className="bg-primaryDark py-2 pl-6 pr-1 rounded-xl text-white absolute top-[-45px] left-[19%] md:left-[35%] lg:left-[26%]">
         <div className="flex justify-between items-start">
           <h1 className="capitalize">total due</h1>
           <select className="text-sm bg-primaryDark text-black" name="" id="">

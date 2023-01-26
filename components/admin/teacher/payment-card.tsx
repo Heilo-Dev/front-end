@@ -5,7 +5,7 @@ type Props = {};
 
 const PaymentCard = (props: Props) => {
   return (
-    <div className="flex justify-between items-center mb-2  px-4 py-2 min-w-[800px] bg-[#D2F9EB] rounded-3xl">
+    <div className="md:flex lg:flex justify-between items-center mb-2  px-4 py-2 w-full bg-[#D2F9EB] rounded-3xl">
       <div className="flex items-center">
         <Image src={maxi} alt="" width={50} />
         <div className="ml-3">
