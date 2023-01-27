@@ -28,7 +28,7 @@ const AdminLayout = ({ children }: Props) => {
   const router = useRouter();
   return (
     <>
-      <div className="lg:hidden h-full sm:flex flex-col items-center justify-center relative">
+      <div className="lg:hidden h-full sm:flex md:flex flex-col items-center relative">
         <div className="bg-white fixed w-full z-10">
           <div className="m-3">
             <button onClick={() => setOpen(true)}>
@@ -39,10 +39,10 @@ const AdminLayout = ({ children }: Props) => {
             className={
               !open
                 ? "bg-primaryDark hidden w-fit top-0 z-10"
-                : "bg-primaryDark w-fit  fixed top-0 z-10"
+                : "bg-primaryDark w-fit fixed top-0 z-10"
             }
           >
-            <div className="min-h-screen w-44 lg:w-24 flex flex-col items-center justify-between">
+            <div className="w-44 h-full lg:w-24 flex flex-col items-center justify-between">
               <div className="mt-4  cursor-pointer flex justify-around w-full">
                 <LocalImage src={logo} width={80} />
                 <button onClick={() => setOpen(false)} className="text-white">
@@ -73,7 +73,7 @@ const AdminLayout = ({ children }: Props) => {
                 />
               </ul>
 
-              <div>
+              <div className="flex-end">
                 <button
                   onClick={() => {
                     signOut({ redirect: false });

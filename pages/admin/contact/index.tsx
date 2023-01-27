@@ -16,7 +16,7 @@ const index = (props: Props) => {
       </Head>
       <AdminLayout>
         <div className="px-8 py-4">
-          <div className="mb-3">
+          <div className="mb-3 mt-16 lg:mt-0">
             <TeacherSection />
           </div>
           <div>

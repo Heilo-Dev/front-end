@@ -8,7 +8,7 @@ type Props = {};
 
 const TeacherMessages = (props: Props) => {
   return (
-    <div className="border-r-[4px] border-white pr-12">
+    <div className="lg:border-r-[4px] border-white lg:pr-12">
       <div className="flex justify-between items-center">
         <h1 className="capitalize bg-primaryLight rounded-xl px-4 text-white font-medium">
           teacher

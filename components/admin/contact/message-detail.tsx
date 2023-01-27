@@ -7,7 +7,7 @@ type Props = {};
 const MessageDetails = (props: Props) => {
   return (
     <div className="border-l-8 border-[#7d7d7d] bg-white mb-3 py-2">
-      <div className="flex justify-around items-center">
+      <div className="lg:flex justify-around items-center p-3 lg:p-0">
         <Image src={dp} alt="" />
         <div>
           <p className="text-[#444F55] font-bold text-lg capitalize">
