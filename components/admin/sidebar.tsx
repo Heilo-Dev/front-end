@@ -22,7 +22,7 @@ type Props = {};
 const AdminSidebar = (props: Props) => {
   const router = useRouter();
   return (
-    <div className="h-full w-24 flex flex-col items-center justify-between">
+    <div className="h-full w-44 lg:w-24 flex flex-col items-center justify-between">
       <div className="mt-4 mr-3 cursor-pointer">
         <LocalImage src={logo} width={80} />
       </div>

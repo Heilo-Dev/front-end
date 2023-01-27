@@ -25,7 +25,7 @@ const AdminQuiz = (props: Props) => {
           <div className="lg:grid grid-cols-12 gap-4">
             {/* <div className="flex flex-col pt-5"> */}
             <div className="col-span-8 p-4 pb-0 mt-4">
-              <div className="lg:grid grid-cols-12 space-y-3 gap-4">
+              <div className="lg:grid grid-cols-12 space-y-3 lg:space-y-0  gap-4">
                 <div className="col-span-4">
                   <AdminQuizDashboardCard
                     title="TOTAL QUIZ CONDUCTED"
