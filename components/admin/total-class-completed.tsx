@@ -5,7 +5,7 @@ type Props = {};
 
 const TotalClassCompleted = (props: Props) => {
   return (
-    <div className="grayDiv p-3 rounded-3xl mt-4 relative">
+    <div className="grayDiv p-3 rounded-3xl mt-4 relative mb-64 lg:mb-0">
       <div className="titleTab bg-white font-semibold text-[#7d7d7d]">
         Total Classes <span className="text-primaryDark">Completed</span>
       </div>

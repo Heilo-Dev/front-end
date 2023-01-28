@@ -36,9 +36,9 @@ const Admin = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminLayout>
-        <div className="pl-6">
+        <div className="lg:pl-6">
           <div className="flex flex-col pt-5">
-            <div className="grid grid-cols-12 gap-4">
+            <div className="lg:grid grid-cols-12 gap-4">
               <div className="col-span-3 p-4 pb-0">
                 <h1 className="uppercase text-[#7D7C7C]/60 font-light text-xl">
                   number of students
@@ -64,7 +64,7 @@ const Admin = ({ children }: Props) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-12 space-x-4 mt-2">
+            <div className="lg:grid grid-cols-12 lg:space-x-4 space-x-0 mt-2">
               <div className="col-span-8">
                 <UpcommingSessions />
               </div>

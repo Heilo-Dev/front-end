@@ -5,8 +5,8 @@ type Props = {};
 
 const UpcommingSessions = (props: Props) => {
   return (
-    <div className="grayDiv p-4 rounded-3xl mt-4 relative">
-      <div className="titleTab bg-white font-semibold text-[#7d7d7d]">
+    <div className="grayDiv p-4 rounded-3xl mt-4 relative mb-28 lg:mb-0">
+      <div className="titleTab bg-white mt-4 lg:mt-0 font-semibold text-[#7d7d7d]">
         Upcomming Sessions
       </div>
       <div className="flex absolute -top-[20px] right-[60px] bg-white overflow-hidden rounded-full border-primaryDark border-[1px]">
