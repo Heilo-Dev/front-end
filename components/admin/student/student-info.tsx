@@ -6,10 +6,10 @@ type Props = {};
 const StudentInfo = (props: Props) => {
   return (
     <div className="border-[3px] border-primaryDark text-[#7d7d7d] rounded-2xl py-3 px-6">
-      <div className="flex justify-between">
-        <div className="flex items-start space-x-6">
+      <div className="lg:flex justify-between">
+        <div className="lg:flex items-start space-x-6">
           <Image width={130} src={women} alt="" />
-          <div className="flex flex-col justify-around pr-2">
+          <div className="lg:flex flex-col justify-around pr-2 mt-3 lg:mt-0">
             <div>
               <p className="capitalize font-semibold">zarin Tajnim</p>
               <p>Maple Leaf International School and College</p>
@@ -32,7 +32,7 @@ const StudentInfo = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between space-y-3 mt-3 lg:mt-0">
           <div className="border-[1px] border-[#E0E0E0] rounded-xl px-6">
             <p className="text-primaryLight capitalize">email</p>
             <p className="font-semibold">sakib.abdullah@gmail.com</p>

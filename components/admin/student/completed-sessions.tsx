@@ -11,21 +11,17 @@ const CompletedSessions = (props: Props) => {
         Completed Sessions
       </div>
       <div className="px-4">
-        <div className="py-1 my-2 rounded-3xl px-3">
-          <table className="table-auto w-full">
-            <tbody>
-              <Scrollbar style={{ height: "calc(45vh - 150px)" }}>
-                <Session />
-                <Session />
-                <Session />
-                <Session />
-                <Session />
-                <Session />
-                <Session />
-                <Session />
-              </Scrollbar>
-            </tbody>
-          </table>
+        <div className="py-1 my-2 rounded-3xl lg:px-3">
+          <Scrollbar style={{ height: "calc(45vh - 150px)" }}>
+            <Session />
+            <Session />
+            <Session />
+            <Session />
+            <Session />
+            <Session />
+            <Session />
+            <Session />
+          </Scrollbar>
         </div>
       </div>
     </div>
